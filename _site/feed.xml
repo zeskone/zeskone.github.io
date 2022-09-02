@@ -1,4 +1,410 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-26T20:42:11-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">zeskone</title><subtitle>zeskone</subtitle><entry><title type="html">The Hax that Rocks the Cradle Walkthrough</title><link href="http://localhost:4000/jekyll/update/2022/08/26/walkthrough.html" rel="alternate" type="text/html" title="The Hax that Rocks the Cradle Walkthrough" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/jekyll/update/2022/08/26/walkthrough</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2022/08/26/walkthrough.html"><![CDATA[<p>Welcome to The Hax that Rocks the Cradle!</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-31T20:28:02-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">zeskone</title><subtitle>zeskone</subtitle><entry><title type="html">VM Intro</title><link href="http://localhost:4000/vm/2022/08/26/VMIntro.html" rel="alternate" type="text/html" title="VM Intro" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/vm/2022/08/26/VMIntro</id><content type="html" xml:base="http://localhost:4000/vm/2022/08/26/VMIntro.html"><![CDATA[<h1 id="virtual-machines-vms">Virtual Machines (VMs):</h1>
+
+<p>The usage of VMs is prevalent in the tech world in general, and security is no exception. We frequently use VMs for penetration testing related operating systems, like Kali or Parrot.</p>
+
+<p>You need two things to get a VM up and running:</p>
+
+<h2 id="1---vm-software">1 - VM Software</h2>
+
+<p>VMWare - <a href="https://www.vmware.com/products/workstation-player.html">https://www.vmware.com/products/workstation-player.html</a></p>
+
+<p>VMWare has a paid version and a free “Workstation Player” version. Follow the link above, scroll to the downloads link at the bottom to download the installation file.</p>
+
+<p>VirtualBox - <a href="https://www.virtualbox.org">https://www.virtualbox.org</a></p>
+
+<p>A free virtual machine solution - it will still have everything you need to get started with installing and using VMs.</p>
+
+<h2 id="2---an-actual-operating-system">2 - An actual operating system</h2>
+
+<p>These two Linux distributions are heavily security-focused and come with a large number of security related tools pre-installed, and many more available in their repositories.</p>
+
+<p>Just make sure to pay attention to whether you’re downloading the VMWare or VirtualBox version of their VM:</p>
+
+<p>Kali - <a href="https://www.kali.org/get-kali/#kali-virtual-machines">https://www.kali.org/get-kali/#kali-virtual-machines</a></p>
+
+<p>Parrot - <a href="https://www.parrotsec.org">https://www.parrotsec.org</a></p>
+
+<p><em>Note that as of August 2022, Parrot requires a manual installation of the OS. If you’re just getting into this for the first time, consider using Kali’s pre-packaged virtual machines, as it will take some of the labor and possible confusion out of the OS setup.</em></p>
+
+<p>You can install any operating system’s .iso file as a VM - such as Ubuntu, Fedora, Windows (Microsoft offers free VMs for Windows), etc. This makes it possible to experiment with different operating systems quickly/easily.</p>]]></content><author><name></name></author><category term="vm" /><summary type="html"><![CDATA[Virtual Machines (VMs):]]></summary></entry><entry><title type="html">The Hax that Rocks the Cradle CLI Basics</title><link href="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_CLI_basics.html" rel="alternate" type="text/html" title="The Hax that Rocks the Cradle CLI Basics" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_CLI_basics</id><content type="html" xml:base="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_CLI_basics.html"><![CDATA[<h1 id="level-7---ssh-and-file-output">Level 7 - SSH and File Output</h1>
+<p>You got another set of credentials - and not for the last time!</p>
+
+<p>Use that to connect to the target host via SSH.</p>
+
+<p>Once you’ve done that, see what files are available to you and see what you can find in the file(s).</p>
+
+<details>
+<summary>Level 7 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+To the Internet for help once more! I don't suggest this all the time because I'm lazy (that's a possible contributing factor though!), but because this is probably the most valuable skill you can develop - learning how to find more information!
+<br />
+Some search suggestions to get you moving:<br />
+<ul>
+<li>SSH usage</li>
+<li>show files in Linux</li>
+<li>display file contents in Linux</li>
+</ul>
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 7 - Full Answer</summary>
+<br />
+<span style="color:MediumSeaGreen">
+Kind of similar to FTP, SSH to a server with:
+<code>ssh x.x.x.x -l username</code><br />
+or<br />
+<code>ssh username@x.x.x.x</code><br />
+... where x.x.x.x is the IP address of the SSH server.<br />
+<br />
+<blockquote>The first time you SSH to something, you'll get a warning about the authenticity of the host and fingerprint, and blah, blah, blah. Just type yes at the warning message. What could possibly go wrong with that?</blockquote><br />
+Enter the password when prompted.<br />
+<br />
+To list files, use <code>ls</code>.<br /><br />
+To output the contents a file to your screen, type:<br />
+<code>cat filename</code><br /><br />
+To disconnect from this session, type <code>exit</code>.<br />
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-8---directing-change">Level 8 - Directing Change</h1>
+<p>The file for this new user is in a directory. Figure out how to get into it!</p>
+
+<details>
+<summary>Level 8 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+Check out how to <b>change directory in Linux</b> online!
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 8 - Full Answer</summary>
+<br />
+<span style="color:MediumSeaGreen">
+Change Directory with the <code>cd</code> command:<br />
+<code>cd info</code><br />
+<br />
+Repeat the steps from Level 7 to get the info for the next user!
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-9---hidden-mysteries">Level 9 - Hidden .mysteries</h1>
+<p>Same deal as level 8 … almost. You might need to do something a little differently to show <strong>all</strong> the contents of a directory using ls.</p>
+
+<details>
+<summary>Level 9 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+<code>ls</code> is a command, and has a help file! Remember how to check that from the CLI? Note that for some commands, some of these options might not work, depending on ... a lot of things:<br />
+<ul>
+<li><code>commandname -h</code></li>
+<li><code>commandname --help</code></li>
+<li><code>man commandname</code></li>
+</ul>
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 9 - Full Answer</summary>
+<br />
+<span style="color:MediumSeaGreen">
+Use:<br />
+<code>ls -a</code><br />
+... to show <b>all</b> directories and files in your current directory, even if they're "hidden".<br />
+<br />
+You can tell if they are hidden because they have a . in front of the directory or file name. It's like a really little kid playing hide and seek ... "If I put a dot in front of my name, you can't see me, right?!"
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-10--">Level 10 -</h1>]]></content><author><name></name></author><category term="thehaxthatrocksthecradle" /><summary type="html"><![CDATA[Level 7 - SSH and File Output You got another set of credentials - and not for the last time!]]></summary></entry><entry><title type="html">The Hax that Rocks the Cradle FTP</title><link href="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_FTP.html" rel="alternate" type="text/html" title="The Hax that Rocks the Cradle FTP" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_FTP</id><content type="html" xml:base="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_FTP.html"><![CDATA[<h1 id="level-6---ftp-wdym-lol">Level 6 - FTP? WDYM? LOL!</h1>
+<p>Acronyms. Get used to them, you’re bound to be swimming in them in just about any tech related field.</p>
+
+<p>Anyway, remember way back in time when we did that nmap scan of the target host?
+See if you can make use of this set of credentials on one of those other ports we found open!</p>
+
+<details>
+<summary>Level 6 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+FTP - File Transfer Protocol - Running on port 21, this protocol lets you transfer files and stuff. Let's turn to our friend the Internet for some help!<br />
+You may want to look up something like a <b>list of FTP commands</b>.<br />
+If you find one, then try to find out:<br />
+<ul>
+<li>How to connect to an FTP server</li>
+<li>How to list files</li>
+<li>Once you have some filenames available, how do you download it?</li>
+</ul>
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 6 - Full Answer</summary>
+<br />
+<span style="color:MediumSeaGreen">
+To connect to an FTP server, the command is simply:<br />
+<code>ftp x.x.x.x</code><br />
+or<br />
+<code>ftp username@x.x.x.x</code><br />
+... where x.x.x.x is the IP address of the FTP server.<br />
+<br />
+Enter the password when prompted. <i>If you're new to CLI environments, note that the password won't show anything on screen when you type, so type carefully or be prepared to hit backspace a ton of times! (No, I don't know that from experience, why do you ask?)</i><br />
+<br />
+To list files, use <code>ls</code> or <code>dir</code>.<br /><br />
+To download a file, type:<br />
+<code>get filename</code><br /><br />
+Then quit FTP with the word <code>quit</code>.<br />
+Example below:<br />
+<image src="/images/ftp.png"></image>
+<br /><br />
+If you're using a CLI environment on your attacking machine and, again, you're new to it and not sure what to do next ...<br />
+<code>ls</code> - to view the files in your current directory<br />
+<code>cat sshcreds.txt</code> - to output the contents of the file<br />
+<br />
+You'll be using these commands quite a few times in the coming steps!<br />
+</span>
+
+</details>
+<p><br /></p>]]></content><author><name></name></author><category term="thehaxthatrocksthecradle" /><summary type="html"><![CDATA[Level 6 - FTP? WDYM? LOL! Acronyms. Get used to them, you’re bound to be swimming in them in just about any tech related field.]]></summary></entry><entry><title type="html">The Hax that Rocks the Cradle Web</title><link href="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_Web.html" rel="alternate" type="text/html" title="The Hax that Rocks the Cradle Web" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_Web</id><content type="html" xml:base="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_Web.html"><![CDATA[<p>For this (and all the challenges to come) to work, you need to have your attacking machine up and running, as well as the “victim” virtual machine.</p>
+
+<h1 id="level-1---finding-your-target-ip-address">Level 1 - Finding Your Target IP Address</h1>
+<p>If you just started up the VM, you don’t necessarily know the IP address it’s using. 
+If you found out by some other sneaky way … uh … forget it? Let’s start over!</p>
+
+<p><code class="language-plaintext highlighter-rouge">nmap</code> is a tool that does ping sweeping, port scanning, all sorts of good enumeration stuff.
+Use nmap to run a “ping scan” of the network the vm is on. If you don’t know how, check the nmap help file, which is conveniently displayed if you just type <code class="language-plaintext highlighter-rouge">nmap</code> and hit enter.</p>
+
+<blockquote>
+  <p>BIG HINT: For most commands, to get the help menu, you’ll use something like:</p>
+
+  <ul>
+    <li>
+      <p><code class="language-plaintext highlighter-rouge">commandname -h</code> or</p>
+    </li>
+    <li>
+      <p><code class="language-plaintext highlighter-rouge">commandname --help</code></p>
+    </li>
+  </ul>
+</blockquote>
+
+<p>If you got it working, the results show the addresses of all the machines on the network you specified. In some cases, it will show the addresses and the name next to it! Something like:</p>
+
+<p><code class="language-plaintext highlighter-rouge">Nmap scan report for thehaxthatrocksthecradle (xx.xx.xx.xx)</code></p>
+
+<p><br /></p>
+
+<p>In some cases though, it won’t. If you have that issue, there are a couple other things you can try:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ping thehaxthatrocksthecradle.local</code>
+  The address you get the reply from is your victim/target VM.</li>
+  <li>Do a <code class="language-plaintext highlighter-rouge">port scan</code> for port 21143 on your local network and see which machine has this open. This should be your target VM - unless you have another computer with that port open, which would be kind of odd - like, very odd.</li>
+</ul>
+
+<p><br />
+Keep this IP address handy! You’ll need it for a lot of the coming steps.</p>
+
+<blockquote>
+  <p>Actually, now’s a good time to start up some note-taking! For future steps, you’ll need to keep track of the username and password you last discovered so you can pick up where you left off. It’s also a good idea to track any new stuff you’ve learned along the way!</p>
+</blockquote>
+
+<p><br /></p>
+<blockquote>
+  <p>Each level will have a <strong>Full Answer</strong> toggle (like the one below) and maybe a <strong>Hint</strong> one preceding it. Give it a good try before clicking the toggle! The help is there if you need it though.</p>
+</blockquote>
+
+<details>
+<summary>Level 1 - Full Answer</summary>
+<br />
+<span style="color:MediumSeaGreen">
+If your IP address scheme for your network is 192.168.0.xxx, your nmap ping scan would be: <br />
+<code>nmap -sn 192.168.0.-</code> 
+<br />(the dash tells nmap "Fill this in with all possible values")
+<br />
+</span>
+
+</details>
+
+<p><br /></p>
+<h1 id="level-2---finding-an-open-web-port">Level 2 - Finding an Open Web Port</h1>
+<p>Now that you’ve found the IP address, run a port scan on the machine, just using nmap’s default “common” ports. This is actually deceptively simple to do, so maybe just use the best resource ever - the Internet, and look up something like “nmap port scan”.</p>
+
+<p>This nmap scan should come back with a port that nmap says is <code class="language-plaintext highlighter-rouge">http-alt</code>. In other words, a web site! Maybe? Let’s check it out!</p>
+
+<p><br /></p>
+<details>
+<summary>Level 2 - Full Answer</summary>
+<br />
+<span style="color:MediumSeaGreen">
+<code>nmap your.target.ip.address</code> <br />
+For example, if your target IP is 10.0.0.50, your command would be:<br />
+<code>nmap 10.0.0.50</code> 
+<br />
+You should see something a lot like:<br />
+<image src="/images/initial_nmap.png"></image>
+<br />
+</span>
+
+</details>
+<p><br /></p>
+<h1 id="level-3---find-a-hidden-directory-and-file">Level 3 - Find a Hidden Directory and File</h1>
+<p>First, navigate to the website by just entering the IP address and port in your browser in this format:</p>
+
+<p><code class="language-plaintext highlighter-rouge">ip.ad.dr.ess:port</code></p>
+
+<p>For example, for target address 10.0.0.50 and port 1234, just type:</p>
+
+<p><code class="language-plaintext highlighter-rouge">10.0.0.50:1234</code></p>
+
+<p>You should get something like:</p>
+
+<p><img src="/images/site_initial_page.png" alt="screen" /></p>
+
+<p><br /></p>
+
+<p>Most websites want you to find their content. What if one had contents that they didn’t necessarily want to show to everyone, but still have it be available to others. How would you find that content?</p>
+
+<p>If a site followed an easy pattern like this, it would be easy:</p>
+<ul>
+  <li>github.com/page1</li>
+  <li>github.com/page2</li>
+</ul>
+
+<p>Well, we’d just guess using “page” followed by numbers all the way up, right?</p>
+
+<p>First of all, if they’re using regular words, that makes things much more complicated! We need a <strong>list</strong> of <strong>words</strong> to try. Known in shady hacking circles by the ominous term, a … <strong>wordlist</strong>. You can make one (and you will, in later levels if you continue on), but there are a bunch already made for you!</p>
+
+<p>Kali and Parrot will come with some in their file system already. For example, this one here:
+<code class="language-plaintext highlighter-rouge">/usr/share/wordlists/dirbuster/directory-list-2.3-small.txt</code></p>
+
+<p>If not, you can download it here:</p>
+
+<p><a href="https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/directory-list-2.3-small.txt">directory-list-2.3-small.txt</a></p>
+
+<p>Secondly, that’s a lot of typing. No one wants to do that. How about a tool to help you do that? There are a few different options out there. We’ll use <code class="language-plaintext highlighter-rouge">ffuf</code>.
+To check if you have it, just type <code class="language-plaintext highlighter-rouge">ffuf</code> at a command prompt on your attacking machine.
+If you get a long help menu, congrats, you have it!</p>
+
+<p>If not, you have to install it. In Kali or Parrot:</p>
+
+<p><code class="language-plaintext highlighter-rouge">sudo apt update</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">sudo apt install ffuf</code></p>
+
+<p>Now use ffuf along with that wordlist above to find a directory AND an html file in that directory that has some more information for you!</p>
+
+<p><br /></p>
+<details>
+<summary>Level 3 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+Check out ffuf's help menu (get used to doing this for all sorts of commands!)
+Specifically, look for how to specify your <b>wordlist file path</b>, <b>target URL</b>, how to search <b>recursively</b>, how to scan for a specific <b>extension</b>, and maybe <b>ignore wordlist comments</b>, since our wordlist has comments at the beginning.
+<br />
+<br />
+The directory and file we're looking for both have hacking/security related names, btw. You'll find others, but can disregard them for now.
+<br />
+<br />
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 3 - Full Answer</summary>
+<br />
+<span style="color:MediumSeaGreen">
+Let's combine all the requirements mentioned in the hint based on ffuf's help file. When dealing with new commands, I like to do this on multiple lines, to help visually understand it better, and track my progress. Then I mush it all together:<br />
+<br />
+<code>ffuf</code> - our command<br />
+<code>-w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt</code>  - the wordlist (adjust if yours is somewhere else)<br />
+<code>-u http://target.ip.add.ress:8000/FUZZ</code>  - our target URL, followed by FUZZ where we want ffuf to fill in the gaps<br />
+<code>-recursion </code> - to search recursively (this can extend scan times significantly, so be careful with this when scanning using large lists)<br />
+<code>-e .html </code> - since we're looking for an html file<br />
+<code>-ic</code>  - ignore wordlist comments just to make results cleaner<br />
+Some options I like to throw in as well:<br />
+<code>-c</code>  - colorize output<br />
+<code>-v</code>  - verbose output<br />
+<br />
+Put it all together and you get:
+<code>ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -u http://192.168.254.175:8000/FUZZ -recursion -e .html -ic -c -v</code> 
+<br />
+You should see:<br />
+<image src="/images/ffuf1.png"></image>
+<br />
+... and scroll down in the results to find ... <br />
+<image src="/images/ffuf2.png"></image>
+<br />
+</span>
+
+</details>
+<p><br /></p>
+
+<h1 id="level-4---finding-sneaky-information">Level 4 - Finding Sneaky Information</h1>
+<p>There are ways to hide information even on a single web page. Take a close look at what’s on this page and see if there might be more to it than meets the eye initially.</p>
+
+<details>
+<summary>Level 4 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+Do you see how the page says:<br />
+<b>This concealment will certainly <i>highlight</i> their weaknesses.</b>
+<br />
+<br />
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 4 - Full Answer</summary>
+<br />
+<span style="color:MediumSeaGreen">
+Highlight everything on the page!<br />
+You can do this by clicking/dragging, or pressing CTRL+a to Select All<br />
+This was just a matter of text being the same color as the background. Simple, but this trick is used sometimes to hide text on pages. Why? Sometimes for SEO (Search Engine Optimization), sometimes by shady characters wanting to hide links on pages they gained illicit access to.
+</span>
+</details>
+<p><br /></p>
+
+<h1 id="level-5---finding-more-sneaky-information">Level 5 - Finding More Sneaky Information</h1>
+<p>This page also has more to it than meets the eye. It’s stored a little differently though.</p>
+
+<details>
+<summary>Level 5 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+The HTML used for web pages may have more information in the source file than you see when you get to it on a browser. There are different reasons for this - for one, it's kind of messy looking to the casual web user. Two, maybe the developers want to be able to leave <b>HTML comments</b> in the page to kind of leave notes to themselves or each other? Hmm...<br />
+<br />
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 5 - Full Answer</summary>
+<br />
+<span style="color:MediumSeaGreen">
+The method for viewing HTML source code might differ for your browser.<br />
+<ul>
+Right click &gt; View Page Source<br />
+Right click &gt; Developer Tools &gt; View Page Source<br />
+CTRL+u<br />
+</ul>
+Something along those lines should work for you.
+Check the source of the page and you should see something like:<br />
+<code>
+&lt;!--<br />
+FTP<br />
+user:lordnikon<br />
+pass:gotanewputer<br />
+--&gt;
+</code>
+</span>
+</details>
+<p><br />
+So what is this new piece of info we just found? Read on to find out!</p>]]></content><author><name></name></author><category term="thehaxthatrocksthecradle" /><summary type="html"><![CDATA[For this (and all the challenges to come) to work, you need to have your attacking machine up and running, as well as the “victim” virtual machine.]]></summary></entry><entry><title type="html">The Hax that Rocks the Cradle Intro</title><link href="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_intro.html" rel="alternate" type="text/html" title="The Hax that Rocks the Cradle Intro" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_intro</id><content type="html" xml:base="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_intro.html"><![CDATA[<p>Welcome to The Hax that Rocks the Cradle!</p>
 
 <h1 id="what-is-this-anyway">What Is This Anyway?</h1>
 <p>The purpose of this intentionally vulnerable VM is to help you get used to some security related concepts while learning Linux stuff along the way.</p>
@@ -12,8 +418,11 @@
 The guide will assume you know how to use a computer, look stuff up online, and open a terminal window, and … that’s mostly it. There will be clues inside the VM itself, and you’ll be filled in on more here if you need it.</p>
 
 <h1 id="what-do-you-need">What Do You Need?</h1>
-<p>An “attacking machine” that is preferably Linux, preferably Kali or Parrot. While not strictly required, this will make using (and possibly installing) the needed tools easier.
-If not using Kali or Parrot, you’ll need to able to use or install:</p>
+<p>An “attacking machine” that is preferably Linux, preferably Kali or Parrot. While not strictly required, this will make using (and possibly installing) the needed tools easier.</p>
+
+<p>New to VMs? Check this out:</p>
+
+<p>If <strong>not</strong> using Kali or Parrot, you’ll need to able to use or install:</p>
 <ul>
   <li>nmap</li>
   <li>Web directory brute forcer</li>
@@ -25,9 +434,11 @@ If not using Kali or Parrot, you’ll need to able to use or install:</p>
   <li>hashcat - or another password cracking tool and one that can mangle wordlists</li>
 </ul>
 
+<p>Kind of a lot of things, right? If that list seems daunting … just use Kali or Parrot, one step at a time!</p>
+
 <p><img src="/images/testscreen.png" alt="screen" /></p>
 
-<p>Test</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[Welcome to The Hax that Rocks the Cradle!]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2022/08/26/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/jekyll/update/2022/08/26/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2022/08/26/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<p>Test</p>]]></content><author><name></name></author><category term="thehaxthatrocksthecradle" /><summary type="html"><![CDATA[Welcome to The Hax that Rocks the Cradle!]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2022/08/26/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/jekyll/update/2022/08/26/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2022/08/26/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <p>Jekyll requires blog post files to be named according to the following format:</p>
 
