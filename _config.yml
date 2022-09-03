@@ -28,7 +28,10 @@ twitter_username: zeskone
 github_username:  zeskone
 
 # Build settings
+minima:
+  skin: dark
 theme: minima
+#remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
 
@@ -51,8 +54,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-#minima:
-#  skin: dark
-
-remote_theme: jekyll/minima
