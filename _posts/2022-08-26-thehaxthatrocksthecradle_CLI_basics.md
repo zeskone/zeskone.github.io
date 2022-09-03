@@ -102,4 +102,161 @@ You can tell if they are hidden because they have a . in front of the directory 
 </span>
 </details>
 <br>
-# Level 10 - 
+# Level 10 - From the Depths
+Here you'll learn to dig a bit deeper.
+
+<details>
+<summary>Level 10 - Hint</summary>
+
+<br>
+<span style="color:DodgerBlue">
+After reading acidburn's message, see what might help in the <code>ls</code> ... welll, help.
+</span>
+</details>
+<br>
+<details>
+<summary>Level 10 - Full Answer</summary>
+
+<br>
+<span style="color:MediumSeaGreen">
+Use:<br>
+<code>ls -R</code><br>
+... to <b>recursively</b> show the contents of the directory. Meaning it'll look in your current directory, and inside any directories in your directory, and any directories inside that ... like a matryoshka doll (those Russian nesting dolls).<br>
+<br>
+</span>
+</details>
+<br>
+
+# Level 11 - The Matryoshka Squad
+Here you'll learn to dig a bit deeper ... and wider? Maybe the shovel you've been using needs to be swapped out for another tool.
+
+<details>
+<summary>Level 11 - Hint</summary>
+
+<br>
+<span style="color:DodgerBlue">
+After reading crashoverride's message, take a look at the <code>find</code> help.
+<br>
+Disclaimer - I personally find the CLI help for <code>find</code> to be ... not so helpful. If you don't find the help you need in <code>find</code>'s help, maybe you'll find that the help you find online will help you use <code>find</code> in a way that helps. Something like that.<br>
+<br>
+Suggested search: <b>linux find examples</b><br>
+<br>
+You can also check the manual for <code>find</code> - it's really long, but much more clear to me than the <code>--help</code> information. While we're at it - I might as well mention that you can also find the manual for most commands online really easily too! I like doing that because you can easily use CTRL+f to search on the page for a specific word if you'd like. How do you find the manuals? I typically just use the same words I'd use at the CLI! In this case, just do a search for "man find". This one in particular may come up with unrelated results, but you should also find the manual info too!
+</span>
+</details>
+<br>
+<details>
+<summary>Level 11 - Full Answer</summary>
+
+<br>
+<span style="color:MediumSeaGreen">
+Use:<br>
+<code>find . -name thep*</code><br>
+Let's break that down:
+<ul>
+<li><code>.</code> - the humble period is Linux's shorthand for "this directory". This tells find to look here. Find works recursively by default, so you don't have to tell it to do that like you would with <code>ls</code></li>
+<li><code>-name</code> - this tells find that the attribute of the file we're searching by is the name. Of course it's the file name! What else would you search by?! You may be sorry you asked in a bit :)</li>
+<li><code>thep*</code> - "thep" is the only piece of the filename that user crashoverride gave us. You have to put the wildcard * after that since you don't know if or how many characters follow that part of the file name.</li>
+</ul>
+<br>
+</span>
+</details>
+<br>
+# Level 12 - Don't Be So Sensitive
+theplague needs some help with this new command!
+
+<details>
+<summary>Level 12 - Hint</summary>
+
+<br>
+<span style="color:DodgerBlue">
+Again, check the <code>find</code> help or online examples.
+<br>
+<code>find</code> is case sensitive by default - tell it to be the opposite.
+</span>
+</details>
+<br>
+<details>
+<summary>Level 12 - Full Answer</summary>
+
+<br>
+<span style="color:MediumSeaGreen">
+Use:<br>
+<code>find . -iname razor*</code><br>
+Let's break that down:
+<ul>
+<li><code>.</code> - the humble period is Linux's shorthand for "this directory". This tells find to look here. Find works recursively by default, so you don't have to tell it to do that like you would with <code>ls</code></li>
+<li><code>-iname</code> - like last time, this tells find that the attribute of the file we're searching by is the name, but the <b>i</b> in <code>iname</code> means to search in a <b>case insensitive</b> manner.</li>
+<li><code>razor*</code> - "razor" is the only piece of the filename that user theplague gave us. You have to put the wildcard * after that since you don't know if or how many characters follow that part of the file name.</li>
+</ul>
+<br>
+</span>
+</details>
+<br>
+# Level 13 - The Nothingness You Seek
+Now razor needs some help with `find`.
+
+<details>
+<summary>Level 13 - Hint</summary>
+
+<br>
+<span style="color:DodgerBlue">
+After checking razor's helpful file* check the <code>find</code> help or online examples.
+<br>
+* - don't see a file from razor? Remember all the <code>ls</code> options?<br>
+<br>
+Remember when I said <code>find</code> can search for attributes other than file names, and you were like "Yeah, whatever, when am I ever going to do that?!"
+<br>
+Now. Now is when you do that!
+</span>
+</details>
+<br>
+<details>
+<summary>Level 13 - Full Answer</summary>
+
+<br>
+<span style="color:MediumSeaGreen">
+Use:<br>
+<code>find . -empty</code><br>
+Let's break that down:
+<ul>
+<li><code>.</code> - the humble period is Linux's shorthand for "this directory". This tells find to look here. Find works recursively by default, so you don't have to tell it to do that like you would with <code>ls</code></li>
+<li><code>-empty</code> - this tells the command to look for an empty file.</li>
+</ul>
+<br>
+</span>
+</details>
+<br>
+# Level 14 - What's Puters, Precious?
+razor's buddy blade needs some help with `find` after a run-in with a mysterious creature.
+
+<details>
+<summary>Level 14 - Hint</summary>
+
+<br>
+<span style="color:DodgerBlue">
+After checking blade's tale of what happened, check the <code>find</code> manual or online examples for how to find files belonging to a user.
+<br>
+
+</span>
+</details>
+<br>
+<details>
+<summary>Level 14 - Full Answer</summary>
+
+<br>
+<span style="color:MediumSeaGreen">
+Use:<br>
+<code>find . -user gollum</code><br>
+Let's break that down:
+<ul>
+<li><code>.</code> - the humble period is Linux's shorthand for "this directory". This tells find to look here. Find works recursively by default, so you don't have to tell it to do that like you would with <code>ls</code></li>
+<li><code>-user gollum</code> - this tells the command that we're looking for a file owned by a particular user - in this case, it's "gollum".</li>
+</ul>
+<br>
+Now that you have that super long file path, <code>cat</code> it out to see the contents.
+Remember (or maybe you're learning this for the first time!) that to copy and paste from the Linux CLI, the keyboard shortcuts are:<br>
+<code>CTRL+SHIFT+c</code> - copy<br>
+<code>CTRL+SHIFT+v</code> - paste<br>
+</span>
+</details>

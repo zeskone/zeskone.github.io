@@ -6,6 +6,7 @@
 <title>The Hax that Rocks the Cradle CLI Basics | zeskone</title>
 <meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="The Hax that Rocks the Cradle CLI Basics" />
+<meta name="author" content="GitHub User" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Level 7 - SSH and File Output You got another set of credentials - and not for the last time!" />
 <meta property="og:description" content="Level 7 - SSH and File Output You got another set of credentials - and not for the last time!" />
@@ -17,10 +18,11 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The Hax that Rocks the Cradle CLI Basics" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-26T17:19:23-05:00","datePublished":"2022-08-26T17:19:23-05:00","description":"Level 7 - SSH and File Output You got another set of credentials - and not for the last time!","headline":"The Hax that Rocks the Cradle CLI Basics","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_CLI_basics.html"},"url":"http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_CLI_basics.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"GitHub User"},"dateModified":"2022-08-26T17:19:23-05:00","datePublished":"2022-08-26T17:19:23-05:00","description":"Level 7 - SSH and File Output You got another set of credentials - and not for the last time!","headline":"The Hax that Rocks the Cradle CLI Basics","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_CLI_basics.html"},"url":"http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_CLI_basics.html"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="zeskone" /></head>
-<body><header class="site-header" role="banner">
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="zeskone" />
+</head>
+<body><header class="site-header">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/">zeskone</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -41,8 +43,8 @@
 
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">The Hax that Rocks the Cradle CLI Basics</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="2022-08-26T17:19:23-05:00" itemprop="datePublished">Aug 26, 2022
+    <p class="post-meta"><time class="dt-published" datetime="2022-08-26T17:19:23-05:00" itemprop="datePublished">
+        Aug 26, 2022
       </time></p>
   </header>
 
@@ -142,7 +144,164 @@ You can tell if they are hidden because they have a . in front of the directory 
 </span>
 </details>
 <p><br /></p>
-<h1 id="level-10--">Level 10 -</h1>
+<h1 id="level-10---from-the-depths">Level 10 - From the Depths</h1>
+<p>Here you’ll learn to dig a bit deeper.</p>
+
+<details>
+<summary>Level 10 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+After reading acidburn's message, see what might help in the <code>ls</code> ... welll, help.
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 10 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+Use:<br />
+<code>ls -R</code><br />
+... to <b>recursively</b> show the contents of the directory. Meaning it'll look in your current directory, and inside any directories in your directory, and any directories inside that ... like a matryoshka doll (those Russian nesting dolls).<br />
+<br />
+</span>
+</details>
+<p><br /></p>
+
+<h1 id="level-11---the-matryoshka-squad">Level 11 - The Matryoshka Squad</h1>
+<p>Here you’ll learn to dig a bit deeper … and wider? Maybe the shovel you’ve been using needs to be swapped out for another tool.</p>
+
+<details>
+<summary>Level 11 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+After reading crashoverride's message, take a look at the <code>find</code> help.
+<br />
+Disclaimer - I personally find the CLI help for <code>find</code> to be ... not so helpful. If you don't find the help you need in <code>find</code>'s help, maybe you'll find that the help you find online will help you use <code>find</code> in a way that helps. Something like that.<br />
+<br />
+Suggested search: <b>linux find examples</b><br />
+<br />
+You can also check the manual for <code>find</code> - it's really long, but much more clear to me than the <code>--help</code> information. While we're at it - I might as well mention that you can also find the manual for most commands online really easily too! I like doing that because you can easily use CTRL+f to search on the page for a specific word if you'd like. How do you find the manuals? I typically just use the same words I'd use at the CLI! In this case, just do a search for "man find". This one in particular may come up with unrelated results, but you should also find the manual info too!
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 11 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+Use:<br />
+<code>find . -name thep*</code><br />
+Let's break that down:
+<ul>
+<li><code>.</code> - the humble period is Linux's shorthand for "this directory". This tells find to look here. Find works recursively by default, so you don't have to tell it to do that like you would with <code>ls</code></li>
+<li><code>-name</code> - this tells find that the attribute of the file we're searching by is the name. Of course it's the file name! What else would you search by?! You may be sorry you asked in a bit :)</li>
+<li><code>thep*</code> - "thep" is the only piece of the filename that user crashoverride gave us. You have to put the wildcard * after that since you don't know if or how many characters follow that part of the file name.</li>
+</ul>
+<br />
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-12---dont-be-so-sensitive">Level 12 - Don’t Be So Sensitive</h1>
+<p>theplague needs some help with this new command!</p>
+
+<details>
+<summary>Level 12 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+Again, check the <code>find</code> help or online examples.
+<br />
+<code>find</code> is case sensitive by default - tell it to be the opposite.
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 12 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+Use:<br />
+<code>find . -iname razor*</code><br />
+Let's break that down:
+<ul>
+<li><code>.</code> - the humble period is Linux's shorthand for "this directory". This tells find to look here. Find works recursively by default, so you don't have to tell it to do that like you would with <code>ls</code></li>
+<li><code>-iname</code> - like last time, this tells find that the attribute of the file we're searching by is the name, but the <b>i</b> in <code>iname</code> means to search in a <b>case insensitive</b> manner.</li>
+<li><code>razor*</code> - "razor" is the only piece of the filename that user theplague gave us. You have to put the wildcard * after that since you don't know if or how many characters follow that part of the file name.</li>
+</ul>
+<br />
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-13---the-nothingness-you-seek">Level 13 - The Nothingness You Seek</h1>
+<p>Now razor needs some help with <code class="language-plaintext highlighter-rouge">find</code>.</p>
+
+<details>
+<summary>Level 13 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+After checking razor's helpful file* check the <code>find</code> help or online examples.
+<br />
+* - don't see a file from razor? Remember all the <code>ls</code> options?<br />
+<br />
+Remember when I said <code>find</code> can search for attributes other than file names, and you were like "Yeah, whatever, when am I ever going to do that?!"
+<br />
+Now. Now is when you do that!
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 13 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+Use:<br />
+<code>find . -empty</code><br />
+Let's break that down:
+<ul>
+<li><code>.</code> - the humble period is Linux's shorthand for "this directory". This tells find to look here. Find works recursively by default, so you don't have to tell it to do that like you would with <code>ls</code></li>
+<li><code>-empty</code> - this tells the command to look for an empty file.</li>
+</ul>
+<br />
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-14---whats-puters-precious">Level 14 - What’s Puters, Precious?</h1>
+<p>razor’s buddy blade needs some help with <code class="language-plaintext highlighter-rouge">find</code> after a run-in with a mysterious creature.</p>
+
+<details>
+<summary>Level 14 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+After checking blade's tale of what happened, check the <code>find</code> manual or online examples for how to find files belonging to a user.
+<br />
+
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 14 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+Use:<br />
+<code>find . -user gollum</code><br />
+Let's break that down:
+<ul>
+<li><code>.</code> - the humble period is Linux's shorthand for "this directory". This tells find to look here. Find works recursively by default, so you don't have to tell it to do that like you would with <code>ls</code></li>
+<li><code>-user gollum</code> - this tells the command that we're looking for a file owned by a particular user - in this case, it's "gollum".</li>
+</ul>
+<br />
+Now that you have that super long file path, <code>cat</code> it out to see the contents.
+Remember (or maybe you're learning this for the first time!) that to copy and paste from the Linux CLI, the keyboard shortcuts are:<br />
+<code>CTRL+SHIFT+c</code> - copy<br />
+<code>CTRL+SHIFT+v</code> - paste<br />
+</span>
+</details>
 
   </div><a class="u-url" href="/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_CLI_basics.html" hidden></a>
 </article>
@@ -153,21 +312,27 @@ You can tell if they are hidden because they have a . in front of the directory 
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">zeskone</h2>
-
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
         <ul class="contact-list">
-          <li class="p-name">zeskone</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
+          <li class="p-name">GitHub User</li>
+          <li><a class="u-email" href="mailto:your-email@domain.com">your-email@domain.com</a></li>
+        </ul>
       </div>
-
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/zeskone"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">zeskone</span></a></li><li><a href="https://www.twitter.com/zeskone"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">zeskone</span></a></li></ul>
-</div>
-
-      <div class="footer-col footer-col-3">
+      <div class="footer-col">
         <p>zeskone</p>
       </div>
     </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/jekyll" target="_blank" title="jekyll"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/jekyllrb" target="_blank" title="jekyllrb"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
 
   </div>
 
