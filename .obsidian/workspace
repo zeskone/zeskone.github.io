@@ -1,0 +1,140 @@
+{
+  "main": {
+    "id": "66e7678a9c66ec45",
+    "type": "split",
+    "children": [
+      {
+        "id": "60fae05c6ba5a247",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "_posts/2022-08-26-thehaxthatrocksthecradle_CLI_basics.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d504d42b67c9b030",
+    "type": "split",
+    "children": [
+      {
+        "id": "0bf1f82359b8e62e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cce3a6e31af5b819",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "8830378dac24b5e8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "20cc9c696965f5e0",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 386.5
+  },
+  "right": {
+    "id": "17ecc7e72a1947b9",
+    "type": "split",
+    "children": [
+      {
+        "id": "24745f3e64581e08",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fa5cc15be8177933",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_posts/2022-08-26-thehaxthatrocksthecradle_CLI_basics.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b465892a00f5a22e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_posts/2022-08-26-thehaxthatrocksthecradle_CLI_basics.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9f9d18ef2232c796",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "a9451846bb077044",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_posts/2022-08-26-thehaxthatrocksthecradle_CLI_basics.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "60fae05c6ba5a247",
+  "lastOpenFiles": [
+    "_posts/2022-08-26-thehaxthatrocksthecradle_Web.md",
+    "_posts/2022-08-26-thehaxthatrocksthecradle_CLI_basics.md",
+    "_posts/2022-08-26-thehaxthatrocksthecradle_FTP.md",
+    "_posts/2022-08-26-thehaxthatrocksthecradle_intro.md",
+    "images/site_initial_page.png.md",
+    "_posts/2022-08-26-VMIntro.md"
+  ]
+}
