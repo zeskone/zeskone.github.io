@@ -1,0 +1,558 @@
+I"U<h1 id="level-7---ssh-and-file-output">Level 7 - SSH and File Output</h1>
+<p>You got another set of credentials - and not for the last time!</p>
+
+<p>Use that to connect to the target host via SSH.</p>
+
+<p>Once you’ve done that, see what files are available to you and see what you can find in the file(s).</p>
+
+<details>
+<summary>Level 7 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+To the Internet for help once more! I don't suggest this all the time because I'm lazy (that's a possible contributing factor though!), but because this is probably the most valuable skill you can develop - learning how to find more information!
+<br />
+Some search suggestions to get you moving:<br />
+<ul>
+<li>SSH usage</li>
+<li>show files in Linux</li>
+<li>display file contents in Linux</li>
+</ul>
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 7 - Full Answer</summary>
+<br />
+<span style="color:MediumSeaGreen">
+Kind of similar to FTP, SSH to a server with:
+<code>ssh x.x.x.x -l username</code><br />
+or<br />
+<code>ssh username@x.x.x.x</code><br />
+... where x.x.x.x is the IP address of the SSH server.<br />
+<br />
+<blockquote>The first time you SSH to something, you'll get a warning about the authenticity of the host and fingerprint, and blah, blah, blah. Just type yes at the warning message. What could possibly go wrong with that?</blockquote><br />
+Enter the password when prompted.<br />
+<br />
+To list files, use <code>ls</code>.<br /><br />
+To output the contents a file to your screen, type:<br />
+<code>cat filename</code><br /><br />
+To disconnect from this session, type <code>exit</code>.<br />
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-8---directing-change">Level 8 - Directing Change</h1>
+<p>The file for this new user is in a directory. Figure out how to get into it!</p>
+
+<details>
+<summary>Level 8 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+Check out how to <b>change directory in Linux</b> online!
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 8 - Full Answer</summary>
+<br />
+<span style="color:MediumSeaGreen">
+Change Directory with the <code>cd</code> command:<br />
+<code>cd info</code><br />
+<br />
+Repeat the steps from Level 7 to get the info for the next user!
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-9---hidden-mysteries">Level 9 - Hidden .mysteries</h1>
+<p>Same deal as level 8 … almost. You might need to do something a little differently to show <strong>all</strong> the contents of a directory using ls.</p>
+
+<details>
+<summary>Level 9 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+<code>ls</code> is a command, and has a help file! Remember how to check that from the CLI? Note that for some commands, some of these options might not work, depending on ... a lot of things:<br />
+<ul>
+<li><code>commandname -h</code></li>
+<li><code>commandname --help</code></li>
+<li><code>man commandname</code></li>
+</ul>
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 9 - Full Answer</summary>
+<br />
+<span style="color:MediumSeaGreen">
+Use:<br />
+<code>ls -a</code><br />
+... to show <b>all</b> directories and files in your current directory, even if they're "hidden".<br />
+<br />
+You can tell if they are hidden because they have a . in front of the directory or file name. It's like a really little kid playing hide and seek ... "If I put a dot in front of my name, you can't see me, right?!"
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-10---from-the-depths">Level 10 - From the Depths</h1>
+<p>Here you’ll learn to dig a bit deeper.</p>
+
+<details>
+<summary>Level 10 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+After reading acidburn's message, see what might help in the <code>ls</code> ... welll, help.
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 10 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+Use:<br />
+<code>ls -R</code><br />
+... to <b>recursively</b> show the contents of the directory. Meaning it'll look in your current directory, and inside any directories in your directory, and any directories inside that ... like a matryoshka doll (those Russian nesting dolls).<br />
+<br />
+</span>
+</details>
+<p><br /></p>
+
+<h1 id="level-11---the-matryoshka-squad">Level 11 - The Matryoshka Squad</h1>
+<p>Here you’ll learn to dig a bit deeper … and wider? Maybe the shovel you’ve been using needs to be swapped out for another tool.</p>
+
+<details>
+<summary>Level 11 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+After reading crashoverride's message, take a look at the <code>find</code> help.
+<br />
+Disclaimer - I personally find the CLI help for <code>find</code> to be ... not so helpful. If you don't find the help you need in <code>find</code>'s help, maybe you'll find that the help you find online will help you use <code>find</code> in a way that helps. Something like that.<br />
+<br />
+Suggested search: <b>linux find examples</b><br />
+<br />
+You can also check the manual for <code>find</code> - it's really long, but much more clear to me than the <code>--help</code> information. While we're at it - I might as well mention that you can also find the manual for most commands online really easily too! I like doing that because you can easily use CTRL+f to search on the page for a specific word if you'd like. How do you find the manuals? I typically just use the same words I'd use at the CLI! In this case, just do a search for "man find". This one in particular may come up with unrelated results, but you should also find the manual info too!
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 11 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+Use:<br />
+<code>find . -name thep*</code><br />
+Let's break that down:
+<ul>
+<li><code>.</code> - the humble period is Linux's shorthand for "this directory". This tells find to look here. Find works recursively by default, so you don't have to tell it to do that like you would with <code>ls</code></li>
+<li><code>-name</code> - this tells find that the attribute of the file we're searching by is the name. Of course it's the file name! What else would you search by?! You may be sorry you asked in a bit :)</li>
+<li><code>thep*</code> - "thep" is the only piece of the filename that user crashoverride gave us. You have to put the wildcard * after that since you don't know if or how many characters follow that part of the file name.</li>
+</ul>
+<br />
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-12---dont-be-so-sensitive">Level 12 - Don’t Be So Sensitive</h1>
+<p>theplague needs some help with this new command!</p>
+
+<details>
+<summary>Level 12 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+Again, check the <code>find</code> help or online examples.
+<br />
+<code>find</code> is case sensitive by default - tell it to be the opposite.
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 12 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+Use:<br />
+<code>find . -iname razor*</code><br />
+Let's break that down:
+<ul>
+<li><code>.</code> - the humble period is Linux's shorthand for "this directory". This tells find to look here. Find works recursively by default, so you don't have to tell it to do that like you would with <code>ls</code></li>
+<li><code>-iname</code> - like last time, this tells find that the attribute of the file we're searching by is the name, but the <b>i</b> in <code>iname</code> means to search in a <b>case insensitive</b> manner.</li>
+<li><code>razor*</code> - "razor" is the only piece of the filename that user theplague gave us. You have to put the wildcard * after that since you don't know if or how many characters follow that part of the file name.</li>
+</ul>
+<br />
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-13---the-nothingness-you-seek">Level 13 - The Nothingness You Seek</h1>
+<p>Now razor needs some help with <code class="language-plaintext highlighter-rouge">find</code>.</p>
+
+<details>
+<summary>Level 13 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+After checking razor's helpful file* check the <code>find</code> help or online examples.
+<br />
+* - don't see a file from razor? Remember all the <code>ls</code> options?<br />
+<br />
+Remember when I said <code>find</code> can search for attributes other than file names, and you were like "Yeah, whatever, when am I ever going to do that?!"
+<br />
+Now. Now is when you do that!
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 13 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+Use:<br />
+<code>find . -empty</code><br />
+Let's break that down:
+<ul>
+<li><code>.</code> - the humble period is Linux's shorthand for "this directory". This tells find to look here. Find works recursively by default, so you don't have to tell it to do that like you would with <code>ls</code></li>
+<li><code>-empty</code> - this tells the command to look for an empty file.</li>
+</ul>
+<br />
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-14---whats-puters-precious">Level 14 - What’s Puters, Precious?</h1>
+<p>razor’s buddy blade needs some help with <code class="language-plaintext highlighter-rouge">find</code> after a run-in with a mysterious creature.</p>
+
+<details>
+<summary>Level 14 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+After checking blade's tale of what happened, check the <code>find</code> manual or online examples for how to find files belonging to a user.
+<br />
+
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 14 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+Use:<br />
+<code>find . -user gollum</code><br />
+Let's break that down:
+<ul>
+<li><code>.</code> - the humble period is Linux's shorthand for "this directory". This tells find to look here. Find works recursively by default, so you don't have to tell it to do that like you would with <code>ls</code></li>
+<li><code>-user gollum</code> - this tells the command that we're looking for a file owned by a particular user - in this case, it's "gollum".</li>
+</ul>
+<br />
+Now that you have that super long file path, <code>cat</code> it out to see the contents.
+Remember (or maybe you're learning this for the first time!) that to copy and paste from the Linux CLI, the keyboard shortcuts are:<br />
+<code>CTRL+SHIFT+c</code> - copy<br />
+<code>CTRL+SHIFT+v</code> - paste<br />
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-15---intelligence-open-sourced">Level 15 - Intelligence, Open Sourced</h1>
+<p>Reconnaissance can be done on targets just by querying publicly available sources. This is referred to as Open Source Intelligence (OSINT).</p>
+
+<details>
+<summary>Level 15 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+You're looking for a book of course, not a movie! <br />
+OSINT sometimes depends on you using just the right search terms, but hopefully this one shouldn't be too tricky with the info given by gollum. Give multiple search engines a try, never know what might pull up that specific bit of info you're looking for.
+<br />
+If you get that piece of info about the story, find a way to show a file's last modified date/time.
+
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 15 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+Using the search term: "first story with Bilbo and Gollum" in a Google search gets you a lot of answers related to the 1937 book, "The Hobbit".
+Using that search term in Bing (as of September 2022 anyway) gets you a nice clear-cut answer:
+<image src="/images/hobbit.png"></image><br />
+<br />
+So now you just have to find the file made in 1937! Wow, this computer must be old, huh?
+For that, we revisit our old friend <code>ls</code>. The <code>-l</code> option outputs the directory's contents in what they call "list" format, which includes some more info besides just the file names, for example, the last time the file was modified!<br />
+<br />
+<pre>
+gollum@thehaxthatrocksthecradle:~/.treasures$ ls -l
+total 280
+... [snipped output] ...
+-rw-rw-r-- 1 gollum gollum 23 Jul 29  1937 a1d0c6e83f027327d8461063f4ac58a6
+</pre>
+Now, it's just a matter of copying that file name, and pasting it into a cat command to output its contents!<br />
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-16---one-line-to-rule-them-all">Level 16 - One Line to Rule Them All</h1>
+<p>Check out what Bilbo has to say - see what you can find out about unique lines in Linux.</p>
+
+<details>
+<summary>Level 16 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+Check out the <code>uniq</code> command, see if it might give you what you need.
+
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 16 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+Running the <code>uniq</code> command with no options isn't quite enough.<br />
+By default, it will just de-duplicate the lines in the file. That still leaves us with a lot (12,595) lines, and doesn't tell us which one was unique to begin with!<br />
+<br />
+Using the <code>-u</code> option shows us <bold>only</bold> the unique line, and ignores the rest:
+<pre>
+bilbo@thehaxthatrocksthecradle:~$ uniq -u creds 
+99b2a15856249b868abbfc92dea6cee6
+</pre>
+<br />
+Note that this won't work in a file with randomized lines, you'd have to sort the lines first. <code>uniq</code> compares one line with the lines around it. In this case, the duplicates are all one after the other, so <code>uniq</code> works by itself.<br />
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-17---searching-for-specific-words">Level 17 - Searching for Specific Words</h1>
+<p>We’ve been looking for files so far, but how about stuff inside the files?</p>
+
+<details>
+<summary>Level 17 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+Check out the <code>grep</code> command, see if it might give you what you need. 
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 17 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+The <code>grep</code> command will find whatever "pattern" you feed it in whatever file you specify. The syntax for the most simple usage of the command is:<br />
+<code>grep searchterm filename</code><br />
+<br />
+Since the term we're searching for is "Bombadil", and the file is "fellowship.txt", our command is:
+<code>grep Bombadil fellowship.txt</code><br />
+<br />
+Sample output:<br />
+<pre>
+frodo@thehaxthatrocksthecradle:~$ grep Bombadil fellowship.txt 
+Tom Bom, jolly Tom, Tom Bombadillo!
+Old Tom Bombadil water-lilies bringing
+here then? Do you know who I am? I'm Tom Bombadil. Tell me what's
+</pre>
+So now we see that Mr. Bombadil's first name is Tom!
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-18---multi-stage-madness">Level 18 - Multi-stage Madness</h1>
+<p>This one has a few steps to it, break the problem up into chunks to help you keep track of what you need to do!</p>
+
+<details>
+<summary>Level 18 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+The steps you'll need to complete this level are:
+<ul>
+<li>Convert the binary number to decimal - by whatever means necessary!</li>
+<li>Use a command to <code>wget</code> the file from the web server.</li>
+<li>Find a way to locate a specific line of text in the file, like he <code>sed</code></li>
+</ul>
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 18 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+The steps fully detailed out are:
+<ul>
+<li>Convert the binary number to decimal - by whatever means necessary!</li>
+<ul>
+<li>The simplest way to do this might be to look up a binary to decimal converter online</li>
+<li>You can also just figure out the binary yourself if you're into that sort of thing</li>
+<li>In any case, you should arrive at the number 278</li>
+</ul>
+<li>Use a command to <code>wget</code> the file from the web server.</li>
+<ul>
+<li>In my case, with the target IP address being 10.0.0.19, my command is:<br />
+<pre>
+wget 10.0.0.19:8000/66f363a6b5353b2cdc28f0b75a94410c/twotowers.txt
+--2022-09-12 19:18:15--  http://10.0.0.19:8000/66f363a6b5353b2cdc28f0b75a94410c/twotowers.txt
+Connecting to 10.0.0.19:8000... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 194068 (190K) [text/plain]
+Saving to: ‘twotowers.txt’
+
+twotowers.txt            100%[=================================&gt;] 189.52K  --.-KB/s    in 0.001s  
+
+2022-09-12 19:18:15 (352 MB/s) - ‘twotowers.txt’ saved [194068/194068]
+</pre>
+</li>
+<li>As you see above, this saved the file to a file called twotowers.txt on the local hard drive.</li>
+</ul>
+<li>Find a way to locate a specific line of text in the file, like he <code>sed</code></li>
+<ul>
+<li><code>sed</code> can do a lot of things. It can find a specific line in a file, for example.<br />
+<pre>
+sed -n '278p' twotowers.txt
+'Night lies over Isengard,' said Treebeard.
+</pre>
+</li>
+</ul>
+</ul>
+Now (finally) you have the name of the speaker and the place he talked about!<br />
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-19---more-multi-stage-situations">Level 19 - More Multi-stage Situations!</h1>
+<p>Get used to it! Some levels from here on in will involve multiple steps - some more than others.</p>
+
+<details>
+<summary>Level 19 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+The steps you'll need to complete this level are:
+<ul>
+<li>OSINT for Samwise's wife's nickname</li>
+<li>Download the file again if needed</li>
+<li>We already used a command to find a specific word or term in a file. How about something near that term, you know, in case you want some context for the line you found?</li>
+</ul>
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 19 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+The steps fully detailed out are:
+<ul>
+<li>OSINT for Samwise's wife's nickname - search for something like "samwise gamgee's wife's name" - should yield "rosie"</li>
+<li>Download the file again if needed</li>
+<li>We already used a command to find a specific word or term in a file. How about something near that term, you know, in case you want some context for the line you found?</li>
+<ul>
+<li><code>grep</code> can be used to search for lines before <code>-B</code>, after <code>-A</code>, or both <code>-C</code> (for context). Follow up the command option with the number of lines you want to expand your search by.</li>
+<li>In our case:<br />
+<pre>grep "Chapter 7" twotowers.txt -A3
+                          _Chapter 7_  
+           Helm's Deep  
+  
+    The sun was already westering ... [snipped]
+</pre></li>
+<li>Keep in mind that a blank line (like the one after "Helm's Deep") still counts as a line as far as <code>grep</code> is concerned.</li>
+</ul>
+</ul>
+<br />
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-20---switching-it-up-a-bit">Level 20 - Switching It Up a Bit</h1>
+<p>Check Rosie’s notes out and again, break this up into chunks to take one step at a time.</p>
+
+<details>
+<summary>Level 20 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+The steps you'll need to complete this level are:
+<ul>
+<li>Find the user's name using OSINT</li>
+<li>Find the user's password using OSINT</li>
+<li>Find a way to switch users in Linux</li>
+<li>If needed, figure out how to check out a user's command history in the Linux CLI. You may find a hint there.</li>
+</ul>
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 20 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+The steps fully detailed out are:
+<ul>
+<li>Find the user's name using OSINT</li>
+<ul>
+<li>Search for something like the term given in the file, "lady of the wood of Lothlorien"</li>
+<li>You should get "Galadriel"</li>
+</ul>
+<li>Find the user's password using OSINT</li>
+<ul>
+<li>S`earch for something like "Galadriel's husband"</li>
+<li>You should get "Celeborn"</li>
+</ul>
+<li>Find a way to switch users in Linux</li>
+<ul>
+<li><code>su</code> is the command to switch users in Linux. In this case, the command would be<br /></li>
+<li><code>su galadriel</code></li>
+</ul>
+<li>If needed, figure out how to check out a user's command history in the Linux CLI. You may find a hint there.</li>
+<ul>
+<li><code>history</code> is the command to check the history of the user you're currently logged in as.</li>
+</ul>
+</ul>
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-21---picture-this-">Level 21 - Picture This …</h1>
+<p>Check Galadriel’s notes out and again, break this up into chunks to take one step at a time.</p>
+
+<details>
+<summary>Level 21 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+The steps you'll need to complete this level are:
+<ul>
+<li>Download the picture of the elf</li>
+<li>Do a reverse image search to find out the elf's name</li>
+<li>Show the running processes </li>
+<li>If needed, figure out how to check out a user's command history in the Linux CLI. You may find a hint there.</li>
+</ul>
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 21 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+The steps fully detailed out are:
+<ul>
+<li>Find the user's name using OSINT</li>
+<ul>
+<li>Search for something like the term given in the file, "lady of the wood of Lothlorien"</li>
+<li>You should get "Galadriel"</li>
+</ul>
+<li>Find the user's password using OSINT</li>
+<ul>
+<li>S`earch for something like "Galadriel's husband"</li>
+<li>You should get "Celeborn"</li>
+</ul>
+<li>Find a way to switch users in Linux</li>
+<ul>
+<li><code>su</code> is the command to switch users in Linux. In this case, the command would be<br /></li>
+<li><code>su galadriel</code></li>
+</ul>
+<li>If needed, figure out how to check out a user's command history in the Linux CLI. You may find a hint there.</li>
+<ul>
+<li><code>history</code> is the command to check the history of the user you're currently logged in as.</li>
+</ul>
+</ul>
+</span>
+</details>
+:ET

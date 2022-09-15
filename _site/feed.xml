@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-12T20:06:58-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">zeskone</title><subtitle>zeskone</subtitle><author><name>GitHub User</name><email>your-email@domain.com</email></author><entry><title type="html">VM Intro</title><link href="http://localhost:4000/vm/2022/08/26/VMIntro.html" rel="alternate" type="text/html" title="VM Intro" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/vm/2022/08/26/VMIntro</id><content type="html" xml:base="http://localhost:4000/vm/2022/08/26/VMIntro.html"><![CDATA[<h1 id="virtual-machines-vms">Virtual Machines (VMs):</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-14T21:43:57-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">zeskone</title><subtitle>zeskone</subtitle><author><name>GitHub User</name><email>your-email@domain.com</email></author><entry><title type="html">VM Intro</title><link href="http://localhost:4000/vm/2022/08/26/VMIntro.html" rel="alternate" type="text/html" title="VM Intro" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/vm/2022/08/26/VMIntro</id><content type="html" xml:base="http://localhost:4000/vm/2022/08/26/VMIntro.html"><![CDATA[<h1 id="virtual-machines-vms">Virtual Machines (VMs):</h1>
 
 <p>The usage of VMs is prevalent in the tech world in general, and security is no exception. We frequently use VMs for penetration testing related operating systems, like Kali or Parrot.</p>
 
@@ -481,12 +481,205 @@ The steps fully detailed out are:
   
     The sun was already westering ... [snipped]
 </pre></li>
-<li>Keep in mind that a blank line still counts as a line as far as <code>grep</code> is concerned.</li>
+<li>Keep in mind that a blank line (like the one after "Helm's Deep") still counts as a line as far as <code>grep</code> is concerned.</li>
 </ul>
 </ul>
 <br />
 </span>
-</details>]]></content><author><name>GitHub User</name><email>your-email@domain.com</email></author><category term="thehaxthatrocksthecradle" /><summary type="html"><![CDATA[Level 7 - SSH and File Output You got another set of credentials - and not for the last time!]]></summary></entry><entry><title type="html">The Hax that Rocks the Cradle FTP</title><link href="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_FTP.html" rel="alternate" type="text/html" title="The Hax that Rocks the Cradle FTP" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_FTP</id><content type="html" xml:base="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_FTP.html"><![CDATA[<h1 id="level-6---ftp-wdym-lol">Level 6 - FTP? WDYM? LOL!</h1>
+</details>
+<p><br /></p>
+<h1 id="level-20---switching-it-up-a-bit">Level 20 - Switching It Up a Bit</h1>
+<p>Check Rosie’s notes out and again, break this up into chunks to take one step at a time.</p>
+
+<details>
+<summary>Level 20 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+The steps you'll need to complete this level are:
+<ul>
+<li>Find the user's name using OSINT</li>
+<li>Find the user's password using OSINT</li>
+<li>Find a way to switch users in Linux</li>
+<li>If needed, figure out how to check out a user's command history in the Linux CLI. You may find a hint there.</li>
+</ul>
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 20 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+The steps fully detailed out are:
+<ul>
+<li>Find the user's name using OSINT</li>
+<ul>
+<li>Search for something like the term given in the file, "lady of the wood of Lothlorien"</li>
+<li>You should get "Galadriel"</li>
+</ul>
+<li>Find the user's password using OSINT</li>
+<ul>
+<li>S`earch for something like "Galadriel's husband"</li>
+<li>You should get "Celeborn"</li>
+</ul>
+<li>Find a way to switch users in Linux</li>
+<ul>
+<li><code>su</code> is the command to switch users in Linux. In this case, the command would be<br /></li>
+<li><code>su galadriel</code></li>
+</ul>
+<li>If needed, figure out how to check out a user's command history in the Linux CLI. You may find a hint there.</li>
+<ul>
+<li><code>history</code> is the command to check the history of the user you're currently logged in as.</li>
+</ul>
+</ul>
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-21---picture-this-">Level 21 - Picture This …</h1>
+<p>Check Galadriel’s notes out and again, break this up into chunks to take one step at a time.</p>
+
+<details>
+<summary>Level 21 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+The steps you'll need to complete this level are:
+<ul>
+<li>Download the picture of the elf - if you happen to be in an environment where you can't view images on your attacking machine, download it <a href="/images/someelf.jpg">here</a>.</li>
+<li>Do a reverse image search to find out the elf's name</li>
+<li>Show the running processes in Linux</li>
+</ul>
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 21 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+The steps fully detailed out are:
+<ul>
+<li>Download the picture of the elf - if you happen to be in an environment where you can't view images on your attacking machine, check it out <a href="/images/someelf.jpg">here</a>.</li>
+<ul>
+<li>From the CLI, use wget again: <code>http://targetip:8000/images/someelf.jpg</code></li>
+</ul>
+<li>Do a reverse image search to find out the elf's name</li>
+<ul>
+<li>Using Google, the most direct way is to go to https://images.google.com:<br />
+<image src="/images/google_imagesearch_start.png"></image><br /></li>
+<br />
+<li>Upload the image you downloaded and you should get something like:<br />
+<image src="/images/google_imagesearch_result.png"></image><br /></li>
+<br />
+<li>Using Bing, just go to the Bing homepage at https://www.bing.com:<br />
+<image src="/images/bing_imagesearch_start.png"></image><br /></li>
+<br />
+<li>Upload the image you downloaded. While the error message on the right seems to indicate we hit a dead-end, notice that the top of the screen does show the character's name, and even the actress who played the character:<br />
+<image src="/images/bing_imagesearch_result.png"></image><br /></li>
+</ul>
+<li>Show the running processes in Linux</li>
+<ul>
+<li>The <code>ps</code> command shows running processes. But ... by itself, it's not all that useful for our purpose here. Check the manual (<code>man ps</code>) to see some more options:
+<pre>
+       To see every process on the system using standard syntax:
+          **ps -e**
+          **ps -ef**
+          **ps -eF**
+          **ps -ely**
+
+       To see every process on the system using BSD syntax:
+          **ps ax**
+          **ps axu**
+</pre>
+</li>
+<li>Running <code>ps -ef</code> or <code>ps auxw</code> will yield something like:
+<pre>
+galadriel@thehaxthatrocksthecradle:~$ ps auxw
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+... snipped a whole BUNCH of stuff we didn't need ...
+... and finally WAAAYYY at the bottom, you see ...
+tauriel     2525  0.0  0.0   2888  1048 ?        Ss   20:25   0:00 /bin/sh -c python3 /home/tauriel/alwayswatching.py
+tauriel     2527  0.0  0.2  18744  7984 ?        S    20:25   0:00 python3 /home/tauriel/alwayswatching.pyc
+</pre>
+</li>
+<li>The <code>ps</code> command shows processes by other users and their names with the right options enabled as shown here.</li>
+<li>Since Galadriel said the password is the file name without the .py, it should be <code>alwayswatching</code>.</li>
+</ul>
+</ul>
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-22---trapping-a-clumsy-target">Level 22 - Trapping a Clumsy Target</h1>
+<p>Tauriel is hunting someone and you’ll have to help her set some traps for that target! Get ready to search online for some new commands to perform quite a few steps this time around!</p>
+
+<details>
+<summary>Level 22 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+The steps you'll need to complete this level are:
+<ul>
+<li>Show owners for directories in /</li>
+<li>Find out how to make a directory in Linux and make one</li>
+<li>Make a hidden directory</li>
+<li>Make an empty file</li>
+<li>Make a hidden empty file</li>
+<li>Check the URL given</li>
+</ul>
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 22 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+The steps fully detailed out are:
+<ul>
+<li>Show owners for directories in /</li>
+<ul>
+<li>Use <code>ls</code> and the <code>-l</code> option along with specifically telling the command to look in <code>/</code> instead of your current directory (its default behavior).</li>
+<li><pre>
+haxy@thehaxthatrocksthecradle:~$ ls -la /
+total 945468
+...[snipped content]...
+drwxr-xr-x   2 tauriel tauriel      4096 Aug  3 20:39 mod
+</pre></li>
+</ul>
+<li>Find out how to make a directory in Linux</li>
+<ul>
+<li><pre>mkdir free_dinner</pre></li>
+<li>If you get no messages in return, it means your command worked - one of those quiet victories, I suppose.</li>
+<li>Now you have to wait (no command needed for that, just uhh, take your hands off the keyboard for a minute?) , check the contents directory of the directory you made, and then output the contents of the new file in that directory. Since you're a pro at those things already, I'll leave the steps out.</li>
+</ul>
+<li>Make a hidden directory in Linux</li>
+<ul>
+<li>Same command as last time, but you just have to know that a hidden directory or file has a <code>.</code> in front of the file name.</li>
+<li><code>mkdir .forest_tea</code></li>
+<li>Wait, check directory contents, check file</li>
+</ul>
+<li>Make an empty file</li>
+<ul>
+<li><code>touch</code> is used to update the Last Modified Date of a file. If the file doesn't exist though, it makes an empty file with the name you supplied!</li>
+<li><code>touch oven</code></li>
+<li>Wait, check file contents</li>
+</ul>
+<li>Make a hidden empty file</li>
+<ul>
+<li><code>touch</code> is our go-to command again, just use a <code>.</code> to make the file hidden!</li>
+<li><code>touch .dwarf_net</code></li>
+</ul>
+<li>Check the URL given</li>
+<ul>
+<li>Again, use <code>wget</code>:</li>
+<li><code>wget targeturl</code></li>
+<li>If you can't view the image on your attacking machine in your environment, replace the http://targetip:8000/images/ in the URL with https://zeskone.github.io/images/ and view it on a device that has web access.</li>
+</ul>
+</ul>
+</span>
+</details>
+<p><br /></p>]]></content><author><name>GitHub User</name><email>your-email@domain.com</email></author><category term="thehaxthatrocksthecradle" /><summary type="html"><![CDATA[Level 7 - SSH and File Output You got another set of credentials - and not for the last time!]]></summary></entry><entry><title type="html">The Hax that Rocks the Cradle FTP</title><link href="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_FTP.html" rel="alternate" type="text/html" title="The Hax that Rocks the Cradle FTP" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_FTP</id><content type="html" xml:base="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_FTP.html"><![CDATA[<h1 id="level-6---ftp-wdym-lol">Level 6 - FTP? WDYM? LOL!</h1>
 <p>Acronyms. Get used to them, you’re bound to be swimming in them in just about any tech related field.</p>
 
 <p>Anyway, remember way back in time when we did that nmap scan of the target host?
