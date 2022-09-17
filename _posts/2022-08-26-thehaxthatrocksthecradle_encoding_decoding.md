@@ -384,3 +384,117 @@ base64 DEcoded string :: amara:itchingforafight
 </span>
 </details>
 <br>
+# Level 26 - You Are Really Gonna Love This
+Amara needs help decoding a set of credentials. This encoding scheme is also common. Chances are, you've seen it in use already.
+
+<details>
+<summary>Level 26 - Hint</summary>
+
+<br>
+<span style="color:DodgerBlue">
+Amara's hint, "You are Elle" - sounded out, would be ... URL!<br>
+See where some research about URL encoding/decoding can get you! Remember the tools you've already used so far and check their documentation.<br>
+<br>
+</span>
+</details>
+<br>
+<details>
+<summary>Level 26 - Full Answer</summary>
+
+<br>
+<span style="color:MediumSeaGreen">
+URL decoding is actually a bit easier than some other types of decoding! A lot of characters will typically remain unchanged in a URL decoded string (things like numbers, letters, etc.). When it comes to punctuation though? All bets are off!
+Here are some examples:
+	<table>
+		<thead>
+			<tr>
+				<th>Normal Character</th>
+				<th>Encoded Character</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>space</td>
+				<td>%20</td>
+			</tr>
+			<tr>
+				<td>%</td>
+				<td>%25</td>
+			</tr>			<tr>
+				<td>&</td>
+				<td>%26</td>
+			</tr>			<tr>
+				<td>+</td>
+				<td>%2B</td>
+			</tr>			<tr>
+				<td>/</td>
+				<td>%2F</td>
+			</tr>			<tr>
+				<td>=</td>
+				<td>%3D</td>
+			</tr>			<tr>
+				<td>?</td>
+				<td>%3F</td>
+			</tr>			<tr>
+				<td>@</td>
+				<td>%40</td>
+			</tr>
+        </tbody>
+    </table>
+<br>
+URLs may use encoding like this so that, for example, stuff like slashes in a URL don't get interpreted by your browser as a directory indicator.<br>
+<br>
+Armed with knowledge, I'm sure you were like "Oh, well, clearly, I can just use CyberChef or hURL to decode this!":<br>
+<br>
+<b>CyberChef:</b><br>
+Just follow the previous CyberChef instructions in Level 23, but use the <b>URL decode</b> recipe.<br>
+<br>
+<b>hURL</b><br>
+<pre>
+└─$ hURL -u moze%3Athe%20%23%20of%20grenades%20I%20carry%20is%20%3E%2020
+
+Original    :: moze%3Athe%20%23%20of%20grenades%20I%20carry%20is%20%3E%2020
+URL DEcoded :: moze:the # of grenades I carry is > 20
+</pre>
+<br>
+<b>Manually</b>
+Oh? Those methods were too easy and you want to do it manually?<br>
+<ul>
+<li>Check out <code>man ascii</code> again.</li>
+<li>Those number codes for URL encoding (%xx) are just the 2 character hex value for the character with a % in front of it.</li>
+<li>You can use the ASCII chart to find the characters that are represented by each URL encoded section in that string!</li>
+</ul>
+</span>
+</details>
+<br>
+# Level 27 - The Flip-Side: Encoding
+Moze got a username, but needs you to encode something in order to get the password!
+
+<details>
+<summary>Level 27 - Hint</summary>
+
+<br>
+<span style="color:DodgerBlue">
+Check out the options in the tools you've used so far!<br>
+</span>
+</details>
+<br>
+<details>
+<summary>Level 27 - Full Answer</summary>
+
+<br>
+<span style="color:MediumSeaGreen">
+<b>CyberChef:</b><br>
+Use the <b>To Base64</b> recipe!<br>
+<br>
+<b>hURL</b><br>
+<pre>
+└─$ hurl -B stillworkingonmysocialskills                                
+
+Original       :: stillworkingonmysocialskills
+base64 ENcoded :: c3RpbGx3b3JraW5nb25teXNvY2lhbHNraWxscw==
+</pre>
+<br>
+</span>
+</details>
+<br>
