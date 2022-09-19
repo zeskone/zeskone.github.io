@@ -498,3 +498,129 @@ base64 ENcoded :: c3RpbGx3b3JraW5nb25teXNvY2lhbHNraWxscw==
 </span>
 </details>
 <br>
+# Level 28 - Breakfast Potatoes
+Tannis needs your help to get claptrap's password. Get ready to make hash browns! Or maybe just a hash.
+
+<details>
+<summary>Level 28 - Hint</summary>
+
+<br>
+<span style="color:DodgerBlue">
+Check out the options in the tools you've used so far! (I know, it's a copy/paste of the last hint, but I can't help it if it's still relevant!)<br>
+</span>
+</details>
+<br>
+<details>
+<summary>Level 28 - Full Answer</summary>
+
+<br>
+<span style="color:MediumSeaGreen">
+<b>CyberChef:</b><br>
+Use the <b>MD5</b> recipe!<br>
+Note that there isn't a From MD5 option for this like there is for stuff like Base64. Why is that, anyway? Hmm ...<br>
+<br>
+<b>hURL</b><br>
+<pre>
+└─$ hurl -m VR-0N1CA
+
+Original   :: VR-0N1CA
+MD5 digest :: 29046555bd2ca0ac79506a8f41127503
+</pre>
+<br>
+</span>
+</details>
+<br>
+# Level 29 - Un-Potatoing
+Claptrap - the nerve of this robot. Still, since you've decided to be a hacker-for-hire for everyone, you might as well see if you can ... un-hashify something for him.
+
+<details>
+<summary>Level 29 - Hint</summary>
+
+<br>
+<span style="color:DodgerBlue">
+Check out the options in the tools you've used so far! **snicker, snicker**<br>
+<br>
+Ok, once you've done that and found that it didn't really work, maybe try looking up online what claptrap mentioned in his note.
+</span>
+</details>
+<br>
+<details>
+<summary>Level 29 - Full Answer</summary>
+
+<br>
+<span style="color:MediumSeaGreen">
+The tools you've been using so far won't work here. Why is that? You can't reverse the hash the way you can reverse encoding.<br>
+<br>
+What you CAN do is look up hashes! How? Here's how ...<br>
+Let's say someone said you had to figure out which single lower-case letter hashes out to:
+<code>b2f5ff47436671b6e533d8dc3614845d</code>.<br>
+<br>
+Ok, you can't reverse the hash like you can a base64 string. You can, however, hash all the letters in the alphabet:<br>
+<pre>
+a - 0cc175b9c0f1b6a831c399e269772661
+b - 92eb5ffee6ae2fec3ad71c777531578f
+c - 4a8a08f09d37b73795649038408b5f33
+d - 8277e0910d750195b448797616e091ad
+e - e1671797c52e15f763380b45e841ec32
+f - 8fa14cdd754f91cc6554c9e71929cce7
+g - b2f5ff47436671b6e533d8dc3614845d
+</pre>
+<br>
+Hey! We got a match at <b>g</b>! We successfully did an MD5 hash lookup.<br>
+<br>
+For this challenge though, tinytina's password is the hash for a whole word! How do we do that?<br>
+It's simple, just take an English dictionary, or perhaps a password list. List out all the words individually and make a table that contains the words and their hashes. Then compare the thousands of hashes one by one to the hash you were given! Oooh, fun!<br>
+Or ...<br>
+See if someone has already done the work of creating the hash table for you, and provides a convenient website where you look up the hash! Yeah, let's do that.<br>
+<br>
+There are several sites you can use for this. They seem to spring up, die out, or become paid/ad-filled services all the time, so you may need to use a different one depending on when you are reading this.<br>
+<br>
+As of today, one option is: <a href="https://www.cmd5.org">https://www.cmd5.org</a>.
+The interface is pretty minimal, just paste in your hash, click the "decrypt" button, and kablam (literally, in this case):<br>
+<img src="/images/cmd5.png"><br>
+</span>
+</details>
+<br>
+# Level 30 - Layers
+Tinytina needs help unraveling a mystery here, great ready for some multi-step action again!
+
+<details>
+<summary>Level 30 - Hint</summary>
+
+<br>
+<span style="color:DodgerBlue">
+For the username, just use some OSINT.<br>
+<br>
+For the password, just remember the tools we've used so far, and be ready to use them a few times.
+</span>
+</details>
+<br>
+<details>
+<summary>Level 30 - Full Answer</summary>
+
+<br>
+<span style="color:MediumSeaGreen">
+For the username, use the hints Tinytina gave you and just do an online search:<br>
+<img src="/images/crunkbunny.png"><br>
+<br>
+Remember that it should be all lowercase and one word when you use it as the username!<br>
+<br>
+For the password:<br>
+First, let's tackle the base64 layers.<br>
+<b>CyberChef:</b><br>
+Use the <b>From Base64</b> recipe like before, but 3 times!<br>
+<img src="/images/cyberchef_multi.png"><br>
+<br>
+<b>hURL</b><br>
+Just run hURL on the string you were given. Run it again on the result, and one more time on that result:<br>
+<img src="/images/hurl_multi.png"><br>
+<br>
+At this point, whether you used hURL or CyberChef, you're left with an MD5 hash, which you can recognize by its 32 character length and only using character used to count in hexadecimal (0-9 and a-f):<br>
+<code>8800b005829650f3ee6f8744b5b2466e</code><br>
+<br>
+Do an online lookup for this hash like before and you should get:<br>
+<code>badaboom</code><br>
+
+</span>
+</details>
+<br>
