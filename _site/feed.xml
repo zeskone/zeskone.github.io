@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-18T19:44:15-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">zeskone</title><subtitle>zeskone</subtitle><author><name>GitHub User</name><email>your-email@domain.com</email></author><entry><title type="html">VM Intro</title><link href="http://localhost:4000/vm/2022/08/26/VMIntro.html" rel="alternate" type="text/html" title="VM Intro" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/vm/2022/08/26/VMIntro</id><content type="html" xml:base="http://localhost:4000/vm/2022/08/26/VMIntro.html"><![CDATA[<h1 id="virtual-machines-vms">Virtual Machines (VMs):</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-21T13:56:28-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">zeskone</title><subtitle>zeskone</subtitle><author><name>GitHub User</name><email>your-email@domain.com</email></author><entry><title type="html">VM Intro</title><link href="http://localhost:4000/vm/2022/08/26/VMIntro.html" rel="alternate" type="text/html" title="VM Intro" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/vm/2022/08/26/VMIntro</id><content type="html" xml:base="http://localhost:4000/vm/2022/08/26/VMIntro.html"><![CDATA[<h1 id="virtual-machines-vms">Virtual Machines (VMs):</h1>
 
 <p>The usage of VMs is prevalent in the tech world in general, and security is no exception. We frequently use VMs for penetration testing related operating systems, like Kali or Parrot.</p>
 
-<p>You need two things to get a VM up and running:</p>
+<p>You need a few things to get a VM up and running:</p>
 
 <h2 id="1---vm-software">1 - VM Software</h2>
 
@@ -26,7 +26,55 @@
 
 <p><em>Note that as of August 2022, Parrot requires a manual installation of the OS. If you’re just getting into this for the first time, consider using Kali’s pre-packaged virtual machines, as it will take some of the labor and possible confusion out of the OS setup.</em></p>
 
-<p>You can install any operating system’s .iso file as a VM - such as Ubuntu, Fedora, Windows (Microsoft offers free VMs for Windows), etc. This makes it possible to experiment with different operating systems quickly/easily.</p>]]></content><author><name>GitHub User</name><email>your-email@domain.com</email></author><category term="vm" /><summary type="html"><![CDATA[Virtual Machines (VMs):]]></summary></entry><entry><title type="html">The Hax that Rocks the Cradle CLI Basics</title><link href="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_CLI_basics.html" rel="alternate" type="text/html" title="The Hax that Rocks the Cradle CLI Basics" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_CLI_basics</id><content type="html" xml:base="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_CLI_basics.html"><![CDATA[<h1 id="level-7---ssh-and-file-output">Level 7 - SSH and File Output</h1>
+<p>You can install any operating system’s .iso file as a VM - such as Ubuntu, Fedora, Windows (Microsoft offers free VMs for Windows), etc. This makes it possible to experiment with different operating systems quickly/easily.</p>
+
+<h2 id="3---install-the-vm-software-and-import-the-vm">3 - Install the VM Software and Import the VM</h2>
+<h3 id="installing-the-vm-software">Installing the VM Software:</h3>
+<p>Installing the software will be a different process depending on which one you chose, but it should be basically like installing any other software on your system.</p>
+
+<h3 id="import-the-vm">Import the VM</h3>
+<p>This will also vary, sorry. It may be as easy as double clicking the VM file in your OS’ file explorer app and it will start the import process right then and there!
+Otherwise, you may need to follow the steps the Kali team was kind enough to put together:</p>
+
+<p><a href="https://www.kali.org/docs/virtualization/import-premade-vmware/">https://www.kali.org/docs/virtualization/import-premade-vmware/</a></p>
+
+<p><a href="https://www.kali.org/docs/virtualization/import-premade-virtualbox/">https://www.kali.org/docs/virtualization/import-premade-virtualbox/</a></p>
+
+<h2 id="4---start-it-up">4 - Start it Up!</h2>
+<p>Now with your VM Software installed, and VM imported into the software, you can start it up!</p>
+
+<p>In VMware - <strong>Start up this guest operating system</strong></p>
+
+<p>In VirtualBox - click the big green <strong>Start</strong> arrow, or double click the VM on the left side.</p>
+
+<p>You should be all set now and boot into the virtual operating system!
+…</p>
+
+<h2 id="5---unless-">5 - Unless …</h2>
+<p>If you get an error that seems like something related to virtualization is disabled, well, you have another step to perform.</p>
+
+<p>Example errors are below. Note that the exact wording will be different depending on whether you have an AMD or Intel CPU.</p>
+
+<p>For example, in VMWare:</p>
+
+<p><img src="/images/vmware_virtualerror.png" alt="screen" /></p>
+
+<p>or:</p>
+
+<p><img src="/images/vmware_amdv.png" alt="screen" /></p>
+
+<p>And in Virtualbox:</p>
+
+<p><img src="/images/vbox_virtualerror.png" alt="screen" /></p>
+
+<p>or:</p>
+
+<p><img src="/images/vbox_amdv.png" alt="screen" /></p>
+
+<p>This means that you’ll need to enable virtualization on in your BIOS/UEFI settings. The process for this varies a lot depending on your computer, but you will need to reboot, press some magical key/keys to enter the BIOS/UEFI settings, change a setting, and Save/Exit.</p>
+
+<p>If you bought your computer, do a search for something like “Enable virtualization [your computer name]”.
+If you built it, you should do the same, but for your motherboard instead, since there’s no official name for your Frankenstein computer :)</p>]]></content><author><name>GitHub User</name><email>your-email@domain.com</email></author><category term="vm" /><summary type="html"><![CDATA[Virtual Machines (VMs):]]></summary></entry><entry><title type="html">The Hax that Rocks the Cradle CLI Basics</title><link href="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_CLI_basics.html" rel="alternate" type="text/html" title="The Hax that Rocks the Cradle CLI Basics" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_CLI_basics</id><content type="html" xml:base="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_CLI_basics.html"><![CDATA[<h1 id="level-7---ssh-and-file-output">Level 7 - SSH and File Output</h1>
 <p>You got another set of credentials - and not for the last time!</p>
 
 <p>Use that to connect to the target host via SSH.</p>

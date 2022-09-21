@@ -1,0 +1,77 @@
+I"�<h1 id="virtual-machines-vms">Virtual Machines (VMs):</h1>
+
+<p>The usage of VMs is prevalent in the tech world in general, and security is no exception. We frequently use VMs for penetration testing related operating systems, like Kali or Parrot.</p>
+
+<p>You need a few things to get a VM up and running:</p>
+
+<h2 id="1---vm-software">1 - VM Software</h2>
+
+<p>VMWare - <a href="https://www.vmware.com/products/workstation-player.html">https://www.vmware.com/products/workstation-player.html</a></p>
+
+<p>VMWare has a paid version and a free “Workstation Player” version. Follow the link above, scroll to the downloads link at the bottom to download the installation file.</p>
+
+<p>VirtualBox - <a href="https://www.virtualbox.org">https://www.virtualbox.org</a></p>
+
+<p>A free virtual machine solution - it will still have everything you need to get started with installing and using VMs.</p>
+
+<h2 id="2---an-actual-operating-system">2 - An actual operating system</h2>
+
+<p>These two Linux distributions are heavily security-focused and come with a large number of security related tools pre-installed, and many more available in their repositories.</p>
+
+<p>Just make sure to pay attention to whether you’re downloading the VMWare or VirtualBox version of their VM:</p>
+
+<p>Kali - <a href="https://www.kali.org/get-kali/#kali-virtual-machines">https://www.kali.org/get-kali/#kali-virtual-machines</a></p>
+
+<p>Parrot - <a href="https://www.parrotsec.org">https://www.parrotsec.org</a></p>
+
+<p><em>Note that as of August 2022, Parrot requires a manual installation of the OS. If you’re just getting into this for the first time, consider using Kali’s pre-packaged virtual machines, as it will take some of the labor and possible confusion out of the OS setup.</em></p>
+
+<p>You can install any operating system’s .iso file as a VM - such as Ubuntu, Fedora, Windows (Microsoft offers free VMs for Windows), etc. This makes it possible to experiment with different operating systems quickly/easily.</p>
+
+<h2 id="3---install-the-vm-software-and-import-the-vm">3 - Install the VM Software and Import the VM</h2>
+<p>###Installing the VM Software:
+Installing the software will be a different process depending on which one you chose, but it should be basically like installing any other software on your system.</p>
+
+<p>###Import the VM
+This will also vary, sorry. It may be as easy as double clicking the VM file in your OS’ file explorer app and it will start the import process right then and there!
+Otherwise, you may need to go to:
+VMWare: File &gt; Open - navigate to and open the VM file (.vmx file).</p>
+
+<p>https://www.kali.org/docs/virtualization/import-premade-vmware/</p>
+
+<p>https://www.kali.org/docs/virtualization/import-premade-virtualbox/</p>
+
+<h2 id="4---start-it-up">4 - Start it Up!</h2>
+<p>Now with your VM Software installed, and VM imported into the software, you can start it up!
+In VMware - <strong>Start up this guest operating system</strong>
+In VirtualBox - click the big green <strong>Start</strong> arrow, or double click the VM on the left side.</p>
+
+<p>You should be all set now and boot into the virtual operating system!
+…</p>
+
+<h2 id="5---unless-">5 - Unless …</h2>
+<p>If you get an error that seems like something related to virtualization is disabled, well, you have another step to perform.</p>
+
+<p>Example errors are below. Note that the exact wording will be different depending on whether you have an AMD or Intel CPU.</p>
+
+<p>For example, in VMWare:</p>
+
+<p><img src="/images/vmware_virtualerror.png" alt="screen" /></p>
+
+<p>or:</p>
+
+<p><img src="/images/vmware_amdv.png" alt="screen" /></p>
+
+<p>And in Virtualbox:</p>
+
+<p><img src="/images/vbox_virtualerror.png" alt="screen" /></p>
+
+<p>or:</p>
+
+<p><img src="/images/vbox_amdv.png" alt="screen" /></p>
+
+<p>This means that you’ll need to enable virtualization on in your BIOS/UEFI settings. The process for this varies a lot depending on your computer, but you will need to reboot, press some magical key/keys to enter the BIOS/UEFI settings, change a setting, and Save/Exit.</p>
+
+<p>If you bought your computer, do a search for something like “Enable virtualization [your computer name]”.
+If you built it, you should do the same, but for your motherboard instead, since there’s no official name for your Frankenstein computer :)</p>
+:ET
