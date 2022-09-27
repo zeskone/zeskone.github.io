@@ -1,0 +1,43 @@
+I"<p><br /></p>
+<h1 id="level-31---layers">Level 31 - Layers</h1>
+<p>Tinytina’s alter-ego, Crunkbunny is now offering a way for you to get a mysterious cat’s creds.</p>
+
+<details>
+<summary>Level 30 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+Check out usage information for <code>netcat</code>. This is another utility where, honestly, the <code>--help</code> leaves me ... n
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 30 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+For the username, use the hints Tinytina gave you and just do an online search:<br />
+<img src="/images/crunkbunny.png" /><br />
+<br />
+Remember that it should be all lowercase and one word when you use it as the username!<br />
+<br />
+For the password:<br />
+First, let's tackle the base64 layers.<br />
+<b>CyberChef:</b><br />
+Use the <b>From Base64</b> recipe like before, but 3 times!<br />
+<img src="/images/cyberchef_multi.png" /><br />
+<br />
+<b>hURL</b><br />
+Just run hURL on the string you were given. Run it again on the result, and one more time on that result:<br />
+<img src="/images/hurl_multi.png" /><br />
+<br />
+At this point, whether you used hURL or CyberChef, you're left with an MD5 hash, which you can recognize by its 32 character length and only using character used to count in hexadecimal (0-9 and a-f):<br />
+<code>8800b005829650f3ee6f8744b5b2466e</code><br />
+<br />
+Do an online lookup for this hash like before and you should get:<br />
+<code>badaboom</code><br />
+
+</span>
+</details>
+<p><br /></p>
+:ET
