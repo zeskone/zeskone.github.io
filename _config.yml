@@ -29,7 +29,7 @@ github_username:  zeskone
 
 # Build settings
 minima:
-  skin: dark
+  #skin: dark
 theme: minima
 #remote_theme: jekyll/minima
 plugins:

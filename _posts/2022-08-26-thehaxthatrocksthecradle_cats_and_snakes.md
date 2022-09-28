@@ -15,7 +15,7 @@ Tinytina's alter-ego, Crunkbunny is now offering a way for you to get a mysterio
 <br>
 <span style="color:DodgerBlue">
 Check out usage information for <code>netcat</code>. This is another utility where, honestly, the <code>--help</code> leaves me ... not helped. Maybe check the <code>man</code> for it or find some help online.
-</span>q
+</span>
 </details>
 <br>
 <details>
@@ -67,7 +67,7 @@ You have some steps to perform here:<br>
 <li>Edit the Python script</li>
 <li>Run the Python script (might need to search for how to do this online)</li>
 </ul>
-</span>q
+</span>
 </details>
 <br>
 <details>
@@ -118,7 +118,6 @@ If not, you can use any other text editor for now.
 </ul>
 </span>
 </details>
-<br>
 <br>
 # Level 33 - Rock & Roll
  Bastet has asked for your aid, will you answer?
@@ -177,6 +176,80 @@ Similar to last time - kind of:
 <li>ANOTHER STEP?! These cats, I tell you ...</li>
 <li>Check the MD5 hash in a hash lookup tool:<br>
 <image src="/images/mafdetrocks_hashlookup.png"></image></li>
+</ul>
+</ul>
+</span>
+</details>
+<br>
+# Level 34 - PIN
+Mafdet, the music fan, ran across an account to hack. Similar to the last few, with a bit of a twist.
+
+<details>
+<summary>Level 34 - Hint</summary>
+
+<br>
+<span style="color:DodgerBlue">
+Similar to last time - kind of:
+<ul>
+<li>Username is given</li>
+<li>Download the Python script</li>
+<li>Edit the Python script</li>
+<li>Run the Python script, BUT save the Python script output to a file</li>
+<li>Find some magical way to search through the output</li>
+</ul>
+</span>
+</details>
+<br>
+<details>
+<summary>Level 34 - Full Answer</summary>
+
+<br>
+<span style="color:MediumSeaGreen">
+Similar to last time - kind of:
+<ul>
+<li>Username is given: sekhmet</li>
+<li>Download the Python script</li>
+<ul>
+<li><code>wget targetip:65521/hacksekhmet.py</code></li>
+</ul>
+<li>Edit the Python script.<br>
+When you're done, it should look something like:<br>
+<image src="/images/hacksekhmet.png"></image></li>
+<br>
+<li>Run the Python script, BUT save the Python script output to a file
+There are multiple ways to do this, I'll cover two here:<br>
+</li>
+<ul>
+<li><code>python hacksekhmet.py > hacksekhmetoutput.txt</code><br>
+The <code>></code> redirects a command's output from <b>stdout</b> (outputting at the CLI screen) to a file of your choosing - in this case, <b>hacksekhmetoutput.txt</b>. If the file doesn't exist, this command will create it. Also note that if the file <i>does</i> exist, this will overwrite it without asking for permission!
+</li>
+<li><code>python hacksekhmet.py | tee hacksekhmetoutput.txt</code><br>
+Piping (<b>pipe</b> is what the <code>|</code> is called) your command's output to <code>tee</code> also redirects your command's output to the file you give it. The key difference is that it <i>also</i> still outputs it to the CLI. This way you can keep an eye on the progress but still also have the output in a file for later.
+</li>
+<li>Either way, you should get a file that has contents that look a lot like this:<br>
+<image src="/images/sekhmetbrute.png"></image></li>
+</ul>
+<li>Find some magical way to search through the output</li>
+<ul>
+<li>Remember our friend <code>grep</code>? Use that to search for <b>success</b> in the file <b>hacksekhmetoutput.txt</b>:<br>
+<pre>└─$ grep success hackout.txt<br>
+... no output here! ...</pre>
+</li>
+<li>Adjust to make sure you search case <b>insensitively</b> as Mafdet suggested:<br>
+<pre>└─$ grep -i success hackout.txt<br> 
+       SucCeSS - *sekhmet-9051* is right. B64 decode:</pre><br>
+</li>
+<li>We found it! Kind of? It seems like there might be something on the next line or something, so adjust for that again using the <code>-A</code> parameter:<br>
+<pre>└─$ grep -i success hackout.txt -A1 
+       SucCeSS - *sekhmet-9051* is right. B64 decode:  
+       bWFmZGV0eW91cHVuaw==</pre><br>
+</li>
+<li>More work?! Who put this thing together?! By now, you're a pro at identifying and decoding base64 strings right?<br>
+<pre>└─$ hURL -b bWFmZGV0eW91cHVuaw==
+
+Original string       :: bWFmZGV0eW91cHVuaw==
+base64 DEcoded string :: mafdetyoupunk</pre>
+</li>
 </ul>
 </ul>
 </span>
