@@ -1,55 +1,4 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>The Hax that Rocks the Cradle Brute Force | zeskone</title>
-<meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="The Hax that Rocks the Cradle Brute Force" />
-<meta name="author" content="GitHub User" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Level 35 - This One’s Not About Brute Force! Ok, so the rest of these levels will involve brute forcing, but this one doesn’t. I just didn’t want to have a whole separate page for this one. \(o_O)/ Sekhmet, in all her anger about Mafdet, also found some other account info!" />
-<meta property="og:description" content="Level 35 - This One’s Not About Brute Force! Ok, so the rest of these levels will involve brute forcing, but this one doesn’t. I just didn’t want to have a whole separate page for this one. \(o_O)/ Sekhmet, in all her anger about Mafdet, also found some other account info!" />
-<link rel="canonical" href="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_brute_force.html" />
-<meta property="og:url" content="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_brute_force.html" />
-<meta property="og:site_name" content="zeskone" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-08-26T17:19:23-05:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="The Hax that Rocks the Cradle Brute Force" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"GitHub User"},"dateModified":"2022-08-26T17:19:23-05:00","datePublished":"2022-08-26T17:19:23-05:00","description":"Level 35 - This One’s Not About Brute Force! Ok, so the rest of these levels will involve brute forcing, but this one doesn’t. I just didn’t want to have a whole separate page for this one. \\(o_O)/ Sekhmet, in all her anger about Mafdet, also found some other account info!","headline":"The Hax that Rocks the Cradle Brute Force","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_brute_force.html"},"url":"http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_brute_force.html"}</script>
-<!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="zeskone" />
-</head>
-<body><header class="site-header">
-
-  <div class="wrapper"><a class="site-title" rel="author" href="/">zeskone</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
-
-        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
-      </nav></div>
-</header>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">The Hax that Rocks the Cradle Brute Force</h1>
-    <p class="post-meta"><time class="dt-published" datetime="2022-08-26T17:19:23-05:00" itemprop="datePublished">
-        Aug 26, 2022
-      </time></p>
-  </header>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    <p><br /></p>
+I"\0<p><br /></p>
 <h1 id="level-35---this-ones-not-about-brute-force">Level 35 - This One’s Not About Brute Force!</h1>
 <p>Ok, so the rest of these levels will involve brute forcing, but this one doesn’t. I just didn’t want to have a whole separate page for this one. \(o_O)/
 <br />Sekhmet, in all her anger about Mafdet, also found some other account info!</p>
@@ -248,7 +197,7 @@ From the example given and the option descriptions, we can start filling in our 
 </span>
 </details>
 <p><br /></p>
-<h1 id="level-37---wordlists-are-cool-kool-kewl">Level 37 - Wordlists are Cool. Kool? Kewl?</h1>
+<h1 id="level-37---wordlists-are-cool-kool-kewl">Level 37 - Wordlists are Cool? Kool? Kewl?</h1>
 <p>Remember how we discussed the fact that wordlists could be pre-made or you could make one of your own?</p>
 
 <details>
@@ -260,8 +209,9 @@ Your steps for this level:
 <ul>
 <li>Check the webpage in a browser if possible, just to see what you're working with</li>
 <li>Check out <code>cewl</code> as Brutus suggested</li>
-<li>Use <code>cewl</code> to generate a list of words 8 characters or longer from the target URL </li>
-<li>Perform that SSH password attack like in the last level</li>
+<li>Use <code>cewl</code> to </li>
+<li></li>
+<li></li>
 </ul>
 </span>
 </details>
@@ -271,78 +221,8 @@ Your steps for this level:
 
 <br />
 <span style="color:MediumSeaGreen">
-Your steps for this level:
-<ul>
-<li>Check the webpage in a browser if possible, just to see what you're working with</li>
-<ul>
-<li>Just go to the URL in your browser: http://INSERTIPADDRESSHERE:8000/sombra/playoverwatch.com/en-us/heroes/sombra/index.html</li>
-</ul>
-<li>Check out <code>cewl</code> online as Brutus suggested</li>
-<ul>
-<li>This will vary of course, I stumbled upon this guide <a href="https://www.geeksforgeeks.org/cewl-tool-creating-custom-wordlists-tool-in-kali-linux/">here.</a></li>
-</ul>
-<li>Use <code>cewl</code> to generate a list of words 8 characters or longer from the target URL:
-<ul>
-<li>
-<pre>
-└─$ cewl -m 8 http://10.0.0.19:8000/sombra/playoverwatch.com/en-us/heroes/sombra/index.html | tee sombralist.txt
-CeWL 5.5.2 (Grouping) Robin Wood (robin@digi.ninja) (https://digi.ninja/)
-Overwatch
-Warcraft
-BATTLETAG
-Resurrected
-Hearthstone
-...
-</pre>
-<br />
-<code>-m 8</code> - tells <code>cewl</code> to only include words of a minimum 8 characters or more<br />
-<code> | tee sombralist.txt </code> - outputs the list to a file, in this case sombralist.txt, but also lets us see it on screen to make sure it looks about right<br />
-</li>
-</ul>
-</li>
-<li>Perform that SSH password attack like in the last level</li>
-<ul>
-<li>Use <code>patator</code> to brute force the SSH server again, just swap out the username and the file name you're using. Refer to level 36's full answer for that command.</li>
-</ul>
-</ul>
+
 </span>
 </details>
 <p><br /></p>
-
-  </div><a class="u-url" href="/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_brute_force.html" hidden></a>
-</article>
-
-      </div>
-    </main><footer class="site-footer h-card">
-  <data class="u-url" href="/"></data>
-
-  <div class="wrapper">
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-        <p class="feed-subscribe">
-          <a href="/feed.xml">
-            <svg class="svg-icon orange">
-              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
-            </svg><span>Subscribe</span>
-          </a>
-        </p>
-        <ul class="contact-list">
-          <li class="p-name">GitHub User</li>
-          <li><a class="u-email" href="mailto:your-email@domain.com">your-email@domain.com</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <p>zeskone</p>
-      </div>
-    </div>
-
-    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/jekyll" target="_blank" title="jekyll"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/jekyllrb" target="_blank" title="jekyllrb"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
-</div>
-
-  </div>
-
-</footer>
-</body>
-
-</html>
+:ET

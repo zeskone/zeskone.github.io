@@ -202,8 +202,8 @@ From the example given and the option descriptions, we can start filling in our 
 </span>
 </details>
 <br>
-# Level 37 - This One is About Brute Force!
-
+# Level 37 - Wordlists are Cool. Kool? Kewl?
+Remember how we discussed the fact that wordlists could be pre-made or you could make one of your own?
 
 <details>
 <summary>Level 37 - Hint</summary>
@@ -212,7 +212,10 @@ From the example given and the option descriptions, we can start filling in our 
 <span style="color:DodgerBlue">
 Your steps for this level:
 <ul>
-<li></li>
+<li>Check the webpage in a browser if possible, just to see what you're working with</li>
+<li>Check out <code>cewl</code> as Brutus suggested</li>
+<li>Use <code>cewl</code> to generate a list of words 8 characters or longer from the target URL </li>
+<li>Perform that SSH password attack like in the last level</li>
 </ul>
 </span>
 </details>
@@ -222,7 +225,40 @@ Your steps for this level:
 
 <br>
 <span style="color:MediumSeaGreen">
-
+Your steps for this level:
+<ul>
+<li>Check the webpage in a browser if possible, just to see what you're working with</li>
+<ul>
+<li>Just go to the URL in your browser: http://INSERTIPADDRESSHERE:8000/sombra/playoverwatch.com/en-us/heroes/sombra/index.html</li>
+</ul>
+<li>Check out <code>cewl</code> online as Brutus suggested</li>
+<ul>
+<li>This will vary of course, I stumbled upon this guide <a href="https://www.geeksforgeeks.org/cewl-tool-creating-custom-wordlists-tool-in-kali-linux/">here.</a></li>
+</ul>
+<li>Use <code>cewl</code> to generate a list of words 8 characters or longer from the target URL:
+<ul>
+<li>
+<pre>
+└─$ cewl -m 8 http://10.0.0.19:8000/sombra/playoverwatch.com/en-us/heroes/sombra/index.html | tee sombralist.txt
+CeWL 5.5.2 (Grouping) Robin Wood (robin@digi.ninja) (https://digi.ninja/)
+Overwatch
+Warcraft
+BATTLETAG
+Resurrected
+Hearthstone
+...
+</pre>
+<br>
+<code>-m 8</code> - tells <code>cewl</code> to only include words of a minimum 8 characters or more<br>
+<code> | tee sombralist.txt </code> - outputs the list to a file, in this case sombralist.txt, but also lets us see it on screen to make sure it looks about right<br>
+</li>
+</ul>
+</li>
+<li>Perform that SSH password attack like in the last level</li>
+<ul>
+<li>Use <code>patator</code> to brute force the SSH server again, just swap out the username and the file name you're using. Refer to level 36's full answer for that command.</li>
+</ul>
+</ul>
 </span>
 </details>
 <br>

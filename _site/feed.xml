@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-29T21:25:22-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">zeskone</title><subtitle>zeskone</subtitle><author><name>GitHub User</name><email>your-email@domain.com</email></author><entry><title type="html">VM Intro</title><link href="http://localhost:4000/vm/2022/08/26/VMIntro.html" rel="alternate" type="text/html" title="VM Intro" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/vm/2022/08/26/VMIntro</id><content type="html" xml:base="http://localhost:4000/vm/2022/08/26/VMIntro.html"><![CDATA[<h1 id="virtual-machines-vms">Virtual Machines (VMs):</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-30T23:26:29-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">zeskone</title><subtitle>zeskone</subtitle><author><name>GitHub User</name><email>your-email@domain.com</email></author><entry><title type="html">VM Intro</title><link href="http://localhost:4000/vm/2022/08/26/VMIntro.html" rel="alternate" type="text/html" title="VM Intro" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/vm/2022/08/26/VMIntro</id><content type="html" xml:base="http://localhost:4000/vm/2022/08/26/VMIntro.html"><![CDATA[<h1 id="virtual-machines-vms">Virtual Machines (VMs):</h1>
 
 <p>The usage of VMs is prevalent in the tech world in general, and security is no exception. We frequently use VMs for penetration testing related operating systems, like Kali or Parrot.</p>
 
@@ -1209,7 +1209,8 @@ From the example given and the option descriptions, we can start filling in our 
 </span>
 </details>
 <p><br /></p>
-<h1 id="level-37---this-one-is-about-brute-force">Level 37 - This One is About Brute Force!</h1>
+<h1 id="level-37---wordlists-are-cool-kool-kewl">Level 37 - Wordlists are Cool. Kool? Kewl?</h1>
+<p>Remember how we discussed the fact that wordlists could be pre-made or you could make one of your own?</p>
 
 <details>
 <summary>Level 37 - Hint</summary>
@@ -1218,7 +1219,10 @@ From the example given and the option descriptions, we can start filling in our 
 <span style="color:DodgerBlue">
 Your steps for this level:
 <ul>
-<li></li>
+<li>Check the webpage in a browser if possible, just to see what you're working with</li>
+<li>Check out <code>cewl</code> as Brutus suggested</li>
+<li>Use <code>cewl</code> to generate a list of words 8 characters or longer from the target URL </li>
+<li>Perform that SSH password attack like in the last level</li>
 </ul>
 </span>
 </details>
@@ -1228,7 +1232,40 @@ Your steps for this level:
 
 <br />
 <span style="color:MediumSeaGreen">
-
+Your steps for this level:
+<ul>
+<li>Check the webpage in a browser if possible, just to see what you're working with</li>
+<ul>
+<li>Just go to the URL in your browser: http://INSERTIPADDRESSHERE:8000/sombra/playoverwatch.com/en-us/heroes/sombra/index.html</li>
+</ul>
+<li>Check out <code>cewl</code> online as Brutus suggested</li>
+<ul>
+<li>This will vary of course, I stumbled upon this guide <a href="https://www.geeksforgeeks.org/cewl-tool-creating-custom-wordlists-tool-in-kali-linux/">here.</a></li>
+</ul>
+<li>Use <code>cewl</code> to generate a list of words 8 characters or longer from the target URL:
+<ul>
+<li>
+<pre>
+└─$ cewl -m 8 http://10.0.0.19:8000/sombra/playoverwatch.com/en-us/heroes/sombra/index.html | tee sombralist.txt
+CeWL 5.5.2 (Grouping) Robin Wood (robin@digi.ninja) (https://digi.ninja/)
+Overwatch
+Warcraft
+BATTLETAG
+Resurrected
+Hearthstone
+...
+</pre>
+<br />
+<code>-m 8</code> - tells <code>cewl</code> to only include words of a minimum 8 characters or more<br />
+<code> | tee sombralist.txt </code> - outputs the list to a file, in this case sombralist.txt, but also lets us see it on screen to make sure it looks about right<br />
+</li>
+</ul>
+</li>
+<li>Perform that SSH password attack like in the last level</li>
+<ul>
+<li>Use <code>patator</code> to brute force the SSH server again, just swap out the username and the file name you're using. Refer to level 36's full answer for that command.</li>
+</ul>
+</ul>
 </span>
 </details>
 <p><br /></p>]]></content><author><name>GitHub User</name><email>your-email@domain.com</email></author><category term="thehaxthatrocksthecradle" /><summary type="html"><![CDATA[Level 35 - This One’s Not About Brute Force! Ok, so the rest of these levels will involve brute forcing, but this one doesn’t. I just didn’t want to have a whole separate page for this one. \(o_O)/ Sekhmet, in all her anger about Mafdet, also found some other account info!]]></summary></entry><entry><title type="html">The Hax that Rocks the Cradle Cats and Snakes</title><link href="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_cats_and_snakes.html" rel="alternate" type="text/html" title="The Hax that Rocks the Cradle Cats and Snakes" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_cats_and_snakes</id><content type="html" xml:base="http://localhost:4000/thehaxthatrocksthecradle/2022/08/26/thehaxthatrocksthecradle_cats_and_snakes.html"><![CDATA[<p><br /></p>
