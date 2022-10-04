@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-30T23:26:29-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">zeskone</title><subtitle>zeskone</subtitle><author><name>GitHub User</name><email>your-email@domain.com</email></author><entry><title type="html">VM Intro</title><link href="http://localhost:4000/vm/2022/08/26/VMIntro.html" rel="alternate" type="text/html" title="VM Intro" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/vm/2022/08/26/VMIntro</id><content type="html" xml:base="http://localhost:4000/vm/2022/08/26/VMIntro.html"><![CDATA[<h1 id="virtual-machines-vms">Virtual Machines (VMs):</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-03T21:44:41-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">zeskone</title><subtitle>zeskone</subtitle><author><name>GitHub User</name><email>your-email@domain.com</email></author><entry><title type="html">VM Intro</title><link href="http://localhost:4000/vm/2022/08/26/VMIntro.html" rel="alternate" type="text/html" title="VM Intro" /><published>2022-08-26T17:19:23-05:00</published><updated>2022-08-26T17:19:23-05:00</updated><id>http://localhost:4000/vm/2022/08/26/VMIntro</id><content type="html" xml:base="http://localhost:4000/vm/2022/08/26/VMIntro.html"><![CDATA[<h1 id="virtual-machines-vms">Virtual Machines (VMs):</h1>
 
 <p>The usage of VMs is prevalent in the tech world in general, and security is no exception. We frequently use VMs for penetration testing related operating systems, like Kali or Parrot.</p>
 
@@ -1246,7 +1246,7 @@ Your steps for this level:
 <ul>
 <li>
 <pre>
-└─$ cewl -m 8 http://10.0.0.19:8000/sombra/playoverwatch.com/en-us/heroes/sombra/index.html | tee sombralist.txt
+└─$ cewl -m 8 http://TARGETIPADDRESS:8000/sombra/playoverwatch.com/en-us/heroes/sombra/index.html | tee sombralist.txt
 CeWL 5.5.2 (Grouping) Robin Wood (robin@digi.ninja) (https://digi.ninja/)
 Overwatch
 Warcraft
@@ -1261,6 +1261,96 @@ Hearthstone
 </li>
 </ul>
 </li>
+<li>Perform that SSH password attack like in the last level</li>
+<ul>
+<li>Use <code>patator</code> to brute force the SSH server again, just swap out the username and the file name you're using. Refer to level 36's full answer for that command.</li>
+</ul>
+</ul>
+</span>
+</details>
+<p><br /></p>
+<h1 id="level-38---mangling">Level 38 - Mangling</h1>
+<p>If your wordlist has the password you needed, that’s great! What if someone uses a standard word, but kinda changes it a little bit to be all sneaky about things?</p>
+
+<p>For example, what if, instead of:</p>
+
+<p><code class="language-plaintext highlighter-rouge">password</code></p>
+
+<p>The user whose password we’re trying to crack uses:</p>
+
+<p><code class="language-plaintext highlighter-rouge">p@$$w0rd</code></p>
+
+<p>Hmm … see if Sombra has some ideas for you.</p>
+
+<details>
+<summary>Level 38 - Hint</summary>
+
+<br />
+<span style="color:DodgerBlue">
+Your steps for this level:
+<ul>
+<li>Use <code>cewl</code> to generate a list of words 12 characters or longer from the target URL </li>
+<li>Have a look at hashcat mangling rule files</li>
+<li>Mangle your newly created wordlist</li>
+<li>Perform that SSH password attack like in the last level</li>
+</ul>
+</span>
+</details>
+<p><br /></p>
+<details>
+<summary>Level 38 - Full Answer</summary>
+
+<br />
+<span style="color:MediumSeaGreen">
+Your steps for this level:
+<ul>
+<li>Use <code>cewl</code> to generate a list of words 12 characters or longer from the target URL </li>
+<ul>
+<li>
+<pre>
+└─$ cewl -m 12 http://TARGETIPADDRESS:8000/sombra/playoverwatch.com/en-us/heroes/sombra/index.html | tee sombralist2.txt
+</pre>
+</li>
+</ul>
+<li>Have a look at hashcat mangling rule files</li>
+<ul>
+<li>
+<pre>
+└─$ ls -la /usr/share/hashcat/rules 
+total 2588
+...
+-rw-r--r-- 1 root root    298 Dec 23  2021 leetspeak.rule
+...
+</pre>
+That one looks like it might be good!
+</li>
+</ul>
+<li>Mangle your newly created wordlist</li>
+<ul>
+<li><code>hashcat --stdout --rules-file /usr/share/hashcat/rules/leetspeak.rule sombralist2.txt &gt; sombralist2_mangled.txt</code><br />
+This command tells hashcat to use the leetspeak rule to "mangle" sombralist2.txt and output the results to sombralist2_mangled.txt (the original file remains intact). Have a look at the results to get an idea of what it did!<br />
+For example, that last line, the word <code>Infiltration</code> was mangled to:
+<pre>
+Infiltr4tion  
+Infiltr@tion  
+Infiltration  
+Infiltration  
+Infiltration  
+Infiltration  
+Infiltration  
+Inf1ltrat1on  
+Inf!ltrat!on  
+Infiltrati0n  
+Infiltration  
+Infiltration  
+Infiltration  
+Infil7ra7ion  
+Infil+ra+ion  
+Infiltration  
+Inf1ltr@t10n
+</pre>
+</li>
+</ul>
 <li>Perform that SSH password attack like in the last level</li>
 <ul>
 <li>Use <code>patator</code> to brute force the SSH server again, just swap out the username and the file name you're using. Refer to level 36's full answer for that command.</li>
