@@ -352,7 +352,7 @@ Inf1ltr@t10n
 </span>
 </details>
 <br>
-# Level 39 - Mangling
+# Level 39 - Cracking Hashes and Taking Names
 You're at the last challenge! This one may cover some new ground for you and take some time to get things figured out - that's ok!
 
 <details>
