@@ -52,6 +52,15 @@ minima:
 # Build settings
 theme: minima
 
+# Build settings
+minima:
+  #skin: dark
+theme: minima
+#remote_theme: jekyll/minima
+plugins:
+  - jekyll-feed
+
+
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
